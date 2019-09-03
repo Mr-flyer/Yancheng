@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>景点详情页</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/tourism_info.css">
+</head>
+
+<body ontouchstart>
+    <!--顶部轮播-->
+    <div class="swiper-container swiper-banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a><img src="upload/ban1.jpg" /></a>
+            </div>
+        </div>
+        <div class="page_number"> 1/1 </div>
+        <!-- 轮播指示点 -->
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    <!-- 景点悬层卡片 -->
+    <div class="wrapper">
+        <div class="tour-card">
+            <div class="card-header">
+                <div class="tour-title">中华麋鹿园</div>
+                <a href="../景区景点/map.html" class="tour-voice">
+                    <img src="images/icon_receiver.png" alt=""> 语音导览
+                </a>
+            </div>
+            <div class="card-body">
+                <div class="tour-desc">
+                    <p class="time">全年 08:00-18:00</p>
+                    <p>游玩约需3-4小时，实际以个人情况为准游玩约需3-4小时</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="tour-location">盐城 | 大丰市麋鹿保护区</div>
+                <img src="images/icon_location.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- </header> -->
+    <!-- 景点门票 -->
+    <div class="tabbar-box">
+        <div class="tabbar-hd">
+            <div class="tabbar-btn active">预订</div>
+            <div class="tabbar-btn">攻略</div>
+            <div class="tabbar-btn">推荐</div>
+        </div>
+        <div class="tabbar-bd">
+            <div class="tab-title">景点门票</div>
+            <div class="ticket-item">
+                <div class="ticket-cont">
+                    <div class="ticket-title">成人票·中华麋鹿园门票(一个手机号限购5张)</div>
+                    <div class="ticket-tips">最早可定明日票 随时退</div>
+                    <div class="ticket-cell">已售 3000+</div>
+                </div>
+                <div class="ticket-action">
+                    &yen;<span>45</span>
+                    <a class="ticket-btn present" href="../景区景点/tourism_shoppingCard.html">
+                        <span>立即预订</span>
+                    </a>
+                </div>
+            </div>
+            <div class="ticket-item">
+                <div class="ticket-cont">
+                    <div class="ticket-title">成人票·中华麋鹿园门票</div>
+                    <div class="ticket-tips">最早可定明日票 随时退</div>
+                    <div class="ticket-cell">已售 3000+</div>
+                </div>
+                <div class="ticket-action">
+                    &yen;<span>45</span>
+                    <a class="ticket-btn" href="../景区景点/tourism_shoppingCard.html">
+                        <span>立即预订</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 简介 -->
+    <div class="tourism_desc">
+        <div class="title">简介</div>
+        <p class="desc">
+            明晶草莓为中国沈阳农业大学从美国品种“日出（Sunrise)”自然杂交实生苗中选出的早熟品种，1998年通过审定。果实大、近圆形、整齐。一级序果平均重27.2g，最大果重43g。果面红色、平整、光泽好，果实硬度较好，果肉红色、致密、髓心小。风味酸甜，含可溶性固形物8.3%，品质上等。果实硬度较大，果皮韧性强，耐贮藏运输。植株较直立，分枝较少，叶片椭圆形，呈匙状上卷，叶较厚、具光泽，叶色较深。株高和株径约33cm。花序低于叶面，两性花，单株平均抽生花序1.8个，每花序平均有9.7朵花。
+            明晶草莓越冬性、抗寒性、抗晚霜性和抗寒性较强。地区适应性广。每亩栽培密度宜1万-1.2万株，为早中熟品种，丰产。适宜在东北和华北露地栽培。
+        </p>
+    </div>
+    <!-- 相关游记 -->
+    <!-- <div class="correlation-card">
+        <div class="card-header">相关游记</div>
+        <div class="card-body">
+            <div class="crl-cont">
+                <div class="crl-title">助力文明城市，全城争做最美盐城人<span>精</span></div>
+                <div class="crl-footer">
+                    <div class="crl-price">出行 8天 | 人均 1600元</div>
+                    <div class="crl-number">
+                        <img src="images/icon_follow.png" /> 41.3万
+                    </div>
+                </div>
+            </div>
+            <div class="crl-pic">
+                <img src="images/Mrflyer.jpg" alt="">
+            </div>
+        </div>
+    </div> -->
+    <!-- 大家都喜欢 -->
+    <!-- <div class="hot_act">
+        <div class="hot_title">热门活动</div>
+        <div class="hot_bd">
+            <div class="act_item">
+                <div class="act_pic">
+                    <img src="images/Mrflyer.jpg" alt="">
+                </div>
+                <div class="act_title">葡萄成熟时</div>
+            </div>
+            <div class="act_item">
+                <div class="act_pic">
+                    <img src="images/Mrflyer.jpg" alt="">
+                </div>
+                <div class="act_title">小动物饲养员们！开始</div>
+            </div>
+            <div class="act_item">
+                <div class="act_pic">
+                    <img src="images/Mrflyer.jpg" alt="">
+                </div>
+                <div class="act_title">小动物饲养员们！开始以前</div>
+            </div>
+        </div>
+    </div> -->
+    </div>
+    </div>
+
+
+
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script src="https://unpkg.com/art-template@4.13.2/lib/template-web.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/config.js"></script>
+    <script id="activity_template" type="text/html">
+        {{each data}}
+        <div class="act_item">
+            <div class="act_pic">
+                <img src="{{$value.scenic_activity_icon}}" alt="">
+            </div>
+            <div class="act_title">{{$value.scenic_activity_name}}</div>
+        </div>
+        {{/each}}
+    </script>
+    <script>
+
+        function init() {
+            // 这是请求数据
+            let url = new URLSearchParams(location.search)
+            let ID = url.get('id') || 1
+            $('.wrapper').find('a').attr('href', `../景区景点/map.html?id=${ID}`)
+            $.showLoading();
+            $.ajax({
+                url: `${baseUrl}/api/v1/scenicarea/read_id`,
+                data: {
+                    id: ID
+                },
+                success(res) {
+                    let {
+                        error_code,
+                        data,
+                        data: {
+                            scenic_area_lat: Y,
+                            scenic_area_lon: X,
+                            scenic_area_name: tourismName,
+                        }
+                    } = res
+                    if (error_code === 0) {
+                        console.log(data);
+                        let obj = {
+                            X,
+                            Y,
+                            tourismName
+                        }
+                        localStorage.setItem('scenic_area_location', JSON.stringify(obj))
+                        $('.tour-title').html(data.scenic_area_name)
+                        $('.tour-desc .time').html(data.scenic_area_time)
+                        $('.tour-location').html(data.scenic_area_address)
+                        $(".desc").html(data.scenic_area_content)
+                        $('.swiper-slide img').attr('src', data.scenic_area_detail_img)
+                    }
+                    $("#listwrap").pullToRefreshDone(); // 重置下拉刷新
+                },
+
+                error(err) {
+                    console.log("失败")
+                    $('.container').html('<img class="err" src="images/error.png" alt="">')
+                },
+                complete() {
+                    $.hideLoading();
+                }
+            })
+            // 大家都喜欢
+            $.ajax({
+                url: `${baseUrl}/api/v1/scenicact/readtop`,
+                success(res) {
+                    let {
+                        error_code,
+                        data: {
+                            items: data
+                        }
+                    } = res
+                    listData = data
+                    if (error_code === 0) {
+                        $(".hot_bd").append(template("activity_template", {
+                            data: listData
+                        }))
+                    }
+                },
+                error(err) {
+                    console.log("失败")
+                    $('.container').append('<img class="err" src="images/error.png" alt="">')
+                }
+            })
+
+        }
+        init()
+    </script>
+</body>
+
+</html>

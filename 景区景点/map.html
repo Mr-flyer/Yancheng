@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>个性化地图</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../static/css/map.css">
+
+</head>
+
+<body>
+    <div class="container_wrapper">
+        <!--   定义地图显示容器   -->
+        <div id="container" ></div>
+        <!-- <div id="parking"></div>
+        <div id="gate"></div> -->
+        <!-- <div class="tabbar_wrapper">
+            <a href="javascript:void(0);" class="tabbar_item active">
+                <img src="../static/images/icon_nav_index.png" alt="">
+                <span>景点</span>
+            </a>
+            <a href="javascript:void(0);" class="tabbar_item">
+                <img src="../static/images/icon_nav_index.png" alt="">
+                <span>路线</span>
+            </a>
+            <a href="javascript:void(0);" class="tabbar_item">
+                <img src="../static/images/icon_nav_index.png" alt="">
+                <span>停车</span>
+            </a>
+            <a href="javascript:void(0);" class="tabbar_item">
+                <img src="../static/images/icon_nav_index.png" alt="">
+                <span>出入口</span>
+            </a>
+        </div> -->
+    </div>
+    <!-- 弹窗 -->
+    <div class="popup" style="display: none">
+        <div class="p_hd">
+            <div class="title">中华麋鹿园</div>
+            <i class="icon_close">
+                <img src="../static/images/icon_close.png" alt="">
+            </i>
+        </div>
+        <div class="p_bd">
+            <div class="card">
+                <div class="card_pic">
+                    <img src="../static/images/Mrflyer.jpg" alt="">
+                </div>
+                <div class="card_cont">
+                    江苏大丰麋鹿国家级自然保护区位于黄海之滨，保护区总面积78000公顷...
+                </div>
+            </div>
+            <a href="../景区景点/voice_info.html" class="p_btn">
+                <img class="icon_receiver" src="../static/images/icon_receiver.png" alt="">解说
+            </a>
+        </div>
+    </div>
+</body>
+<script src="../static/lib/jquery-2.1.4.js"></script>
+<script src="../static/js/config.js"></script>
+<script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=6LLBZ-QMLCX-HNA4L-T3ADN-4O3V5-BFFLB"></script>
+<script src="../static/js/map_marker.js"></script>
+</html>

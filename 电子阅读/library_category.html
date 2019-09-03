@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>分类</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/index_tourism.css">
+</head>
+
+<body ontouchstart>
+        <!--主体-->
+        <div>
+            <nav class="category_tab">
+                <span class="active">全部</span>
+                <span>诗歌</span>
+                <span>小说</span>
+                <span>散文</span>
+                <span>戏剧</span>
+                <span>传记</span>
+            </nav>
+            <!-- 借阅排行 -->
+            <section class="ranking">
+                <div class="ranking_cardwrapper category">
+                    <!-- 卡一 -->
+                    <div class="rc_item">
+                        <div class="book_pic">
+                            <img src="images/Mrflyer.jpg" />
+                        </div>
+                        <div class="book_wrapper">
+                            <div class="book_body">
+                                <div class="book_name">楚门的世界楚门的世界楚门的世界楚门的世界</div>
+                                <div class="book_cont">
+                                    <p>安托万·德·圣·埃克苏佩里</p>
+                                    <p>出版社 天津人民出版社 / 2013-01</p>
+                                    <p>ISBN 9787201077642</p>
+                                </div>
+                            </div>
+                            <p class="book_stock">
+                                <img class="icon_book" src="images/icon_book.png" />
+                                可借册数 <span> 2</span>本
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 卡一 -->
+                    <div class="rc_item">
+                        <div class="book_pic">
+                            <img src="images/Mrflyer.jpg" />
+                        </div>
+                        <div class="book_wrapper">
+                            <div class="book_body">
+                                <div class="book_name">楚门的世界楚门的世界楚门的世界楚门的世界</div>
+                                <div class="book_cont">
+                                    <p>安托万·德·圣·埃克苏佩里</p>
+                                    <p>出版社 天津人民出版社 / 2013-01</p>
+                                    <p>ISBN 9787201077642</p>
+                                </div>
+                            </div>
+                            <p class="book_stock">
+                                <img class="icon_book" src="images/icon_book.png" />
+                                可借册数 <span> 2</span>本
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 卡一 -->
+                    <div class="rc_item">
+                        <div class="book_pic">
+                            <img src="images/Mrflyer.jpg" />
+                        </div>
+                        <div class="book_wrapper">
+                            <div class="book_body">
+                                <div class="book_name">楚门的世界楚门的世界楚门的世界楚门的世界</div>
+                                <div class="book_cont">
+                                    <p>安托万·德·圣·埃克苏佩里</p>
+                                    <p>出版社 天津人民出版社 / 2013-01</p>
+                                    <p>ISBN 9787201077642</p>
+                                </div>
+                            </div>
+                            <p class="book_stock">
+                                <img class="icon_book" src="images/icon_book.png" />
+                                可借册数 <span> 2</span>本
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+        </div>
+        <footer>
+            <a href="javascript:void(0);" class="active">
+                <img class="icon" src="images/icon_nav_index.png" />
+                <span>首页</span>
+            </a>
+            <a href="javascript:void(0);">
+                <img class="icon" src="images/icon_nav_category_active.png" />
+                <span>分类</span>
+            </a>
+            <a href="javascript:void(0);">
+                <img class="icon" src="images/icon_nav_bookcard.png" />
+                <span>图书证</span>
+            </a>
+            <a href="javascript:void(0);">
+                <img class="icon" src="images/icon_nav_read.png" />
+                <span>芸悦读</span>
+            </a>
+        </footer>
+    </div>
+
+
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script>
+        $('.category_tab').on('click', 'span', function() {
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    </script>
+</body>
+
+</html>

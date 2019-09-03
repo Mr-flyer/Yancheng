@@ -1,0 +1,253 @@
+@import './_base';
+@import './_tool';
+
+body {
+    background-color: #F4F4F4;
+}
+.weui-content {
+    padding-top: 0;
+}
+.swiper-banner {
+    height: rem(392);
+    position: relative;
+    a {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        background-color: aqua;
+        > img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .page_number {
+        position: absolute;
+        bottom: rem(52); right: rem(30);
+        left: initial;z-index: 9;
+        width: auto;
+        background:rgba(255,255,255,.8);
+        border-radius:6px;
+        font-size: 12px;
+        line-height: 1.2em;
+        color: #333;
+        padding: 0 rem(16);
+        transform: scale(.913);
+    }
+}
+.main {
+    background-color: #fff;
+}
+.ve_price {
+    font-size: 11px;
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    // line-height:29px;
+    > span {
+        font-size: 22px;
+        font-weight:500;
+        color:rgba(34,200,216,1);
+        // line-height:58px;
+    }
+}
+.item{
+    label{
+        flex-shrink: 0;
+    }
+    input{  
+        display: block;
+        width: 100%;
+        padding-left: rem(160);
+        height: rem(46);
+        font-size: 14px;
+        border:none;
+        outline: none;
+        &[type="date"] {
+            text-align: right;
+            color: #22C8D8;
+            background-color: transparent;
+            &:before{
+                content: attr(placeholder);
+                color: #22C8D8;
+            }
+            &:focus {
+                &:before{
+                    content: '';
+                }
+            }
+        }
+    }
+}
+.card_float {
+    position: relative;
+    z-index: 9;
+    width: rem(690);
+    margin: rem(-30) rem(30) rem(30);
+    padding: rem(30) rem(24) rem(14);
+    background: #fff url('../images/tourinfo_cardbg.png') no-repeat bottom right;
+    background-size: rem(180);
+    box-shadow:-1px 4px 6px 0px rgba(34,200,216,0.15);
+    font-size: 14px;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    // line-height:42px;
+    .ve_title {
+        font-size: 22px;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+        display: flex;
+        justify-content: space-between;
+        line-height: 1;
+        padding-bottom: rem(10);
+
+    }
+    .ve_time, .ve_tel, .ve_location {
+        height: rem(83);
+        border-bottom: 1px solid #F3F6F9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > img {
+            width: rem(27);
+        }
+    }
+    .ve_location {
+        border-bottom: none;
+    }
+}
+
+.tag_container {
+    padding: 0 rem(30);
+}
+.tag_bar {
+    // display: flex;
+    padding-bottom: rem(26);
+    border-bottom: 1px solid #F3F6F9;
+    .tag {
+        display: inline-block;
+        padding: 5px 9px;
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 1;
+        text-align: center;
+        transform: scale(.917);
+        background-color: #fff;
+        &:nth-of-type(3n+1) {
+            color:rgba(49,207,148,1);
+            background:rgba(49,207,148,.3)
+        }
+        &:nth-of-type(3n+2) {
+            color:rgba(34,200,216,1);
+            background:rgba(34,200,216,.3)
+        }
+        &:nth-of-type(3n+3) {
+            color:rgba(250,173,20,1);
+            background:rgba(250,173,20,.3)
+        }
+    }  
+}
+.tag_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: rem(30) 0 rem(10);
+    .tag_item {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin-bottom: rem(20);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        font-weight:500;
+        color:rgba(102,102,102,1);
+        > img {
+            width: rem(34);
+            margin-right: 6px;
+        }
+    }
+}
+// 预定时间区块
+.schedule {
+    height: rem(92);
+    padding: 0 rem(30);
+    margin: rem(10) 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .sch_txt {
+        font-size: 17px;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+    }
+    .sch_time {
+        font-size: 14px;
+        font-weight:500;
+        color:rgba(34,200,216,1);
+    }
+}
+// 详情内容区块
+.ve_infotxt {
+    padding: rem(35) rem(30) rem(100);
+    background-color: #fff;
+    .vei_title {
+        font-size: 18px;
+        line-height: 1;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        padding-bottom: rem(20);
+    }
+    .vei_desc {
+        font-size:14px;
+        font-weight:400;
+        color:rgba(102,102,102,1);
+        line-height: 20px;
+    }
+}
+
+// 页脚按钮
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0; left: 0;
+    height: rem(98);
+    display: flex;
+    background-color: #fff;
+    // background-color: aqua;
+    .ve_allprice {
+        flex-shrink: 0;
+        max-width: 50%;
+        font-size:12px;
+        font-weight:400;
+        color:rgba(102,102,102,1);
+        padding: 0 rem(40) 0 rem(30);
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        > span {
+            // flex: 1;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 18px;
+            font-weight:500;
+            color:rgba(34,200,216,1);
+            display: flex;
+            align-items: flex-end;
+            margin-left: 5px;
+        }
+    }
+    .submit {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        font-weight:500;
+        color:rgba(255,255,255,1);
+        background-color:#22C8D8;
+    }
+}

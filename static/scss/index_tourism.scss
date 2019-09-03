@@ -1,0 +1,752 @@
+@import './_base';
+@import './_tool';
+
+body {
+    background-color: #F4F4F4;
+}
+header,
+section {
+    background-color: #fff;
+}
+
+section {
+    margin-bottom: rem(10);
+
+    .h1 {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(55, 56, 68, 1);
+        line-height: 1;
+        padding: 0 rem(30);
+        padding-bottom: rem(20);
+    }
+}
+
+// 搜索框
+.search-container {
+    position: relative;
+    z-index: 1;
+    padding: 0 rem(30);
+    transform: translateY(-50%);
+
+    .search-wrapper {
+        padding: 0 rem(30);
+        height: rem(66);
+        border-radius: rem(33);
+        background-color: #fff;
+        box-shadow: -1px 3px 16px 0px rgba(38, 217, 201, 0.35);
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon_search {
+        width: rem(24);
+        flex-shrink: 0;
+        align-self: center;
+        margin-right: rem(20);
+    }
+
+    input[type="search"] {
+        width: 60%;
+        // background-color: transparent;
+        transition: width .6s;
+        font-size: 14px;
+
+        &:focus {
+            width: 100%;
+        }
+    }
+}
+
+// 热门活动
+.hot-activity {
+    background-color: #fff;
+    // margin: rem(10) 0;
+    margin-bottom: rem(10);
+
+    .hota-hd {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 rem(30) rem(20);
+
+        &::after {
+            content: '';
+            position: relative;
+            width: 6px;
+            height: 6px;
+            border-top: 1px solid #999;
+            border-right: 1px solid #999;
+            transform: rotateZ(45deg);
+        }
+
+        .hota-title {
+            font-size: 18px;
+            font-weight: bolder;
+            line-height: 1;
+            color: rgba(55, 56, 68, 1);
+        }
+    }
+
+    .hota-bd {
+        display: flex;
+        overflow-y: auto;
+        .hote-cont {
+            display: flex;
+            padding: 0 rem(30) rem(30);
+        }
+        .hota-item {
+            flex-shrink: 0;
+            width: rem(334);
+            height: rem(200);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            margin-right: rem(20);
+            &:last-of-type {
+                margin-right: 0;
+            }
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &:nth-of-type(1) .hota-mask::before {
+                content: 'TOP.1';
+                background-color: #FAAD14;
+            }
+
+            &:nth-of-type(2) .hota-mask::before {
+                content: 'TOP.2';
+                background-color: #22C8D8;
+            }
+
+            &:nth-of-type(3) .hota-mask::before {
+                content: 'TOP.3';
+                background-color: #31CF94;
+            }
+
+            .hota-mask {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding: 0 rem(60);
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, .2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.2em;
+                > span {
+                    text-align: center;
+                    text-overflow: -o-ellipsis-lastline;
+                    overflow: hidden;
+                    text-overflow: ellipsis; // 溢出文本省略号显示
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; // 限制块级元素文本行数
+                    /*! autoprefixer: off */
+                    -webkit-box-orient: vertical; // 重置文本排列方式
+                    /* autoprefixer: on */
+                }
+                &::before {
+                    // content: 'TOP.1';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    // width: rem(90);
+                    // line-height: rem(34);
+                    line-height: 1;
+                    padding: rem(10) rem(20);
+                    text-align: center;
+                    font-size: 12px;
+                    transform: scale(.83);
+                    transform-origin: right top;
+                    font-weight: normal;
+                    color: #fff;
+                    // background:rgba(250,173,20,1);
+                    border-radius: 0px 0px 0px 8px;
+                }
+            }
+        }
+    }
+}
+
+// 热门景区 
+.hot-scenic {
+    background-color: #fff;
+    display: flex;
+
+    // max-height: rem(1247);
+    max-height: 100vh;
+    padding-bottom: rem(100);
+    aside, section {
+        &.stlist {
+            overflow-y: auto;
+        }
+    }
+    aside {
+        width: rem(200);
+        -webkit-overflow-scrolling: touch;
+        // overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            padding: rem(27) rem(24);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #9CA6B0;
+            background-color: #F3F6F9;
+            margin-bottom: 2px;
+            position: relative;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        li.active {
+            background-color: #fff;
+            color: #22C8D8;
+            font-size: 15px;
+            font-weight: bold;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: rem(6);
+                height: rem(36);
+                background-color: #22C8D8;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    section {
+        flex: 1;
+        -webkit-overflow-scrolling: touch;
+        // overflow-y: auto;
+        padding: rem(30) rem(24);
+        display: flex;
+        justify-content: space-between;
+        // align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+
+        // background-color: aqua;
+        .sct-item {
+            // flex: 1;
+            flex-shrink: 0;
+            width: rem(236);
+            margin-bottom: rem(26);
+        }
+
+        .sct-hd {
+            width: 100%;
+            height: rem(170);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+
+            >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &::before {
+                // content: ''
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: rem(66);
+                line-height: rem(30);
+                background-color: #22C8D8;
+                border-radius: 0 0 4px 0;
+                font-size: 12px;
+                color: #fff;
+                text-align: center;
+            }
+
+            &.a4::before {
+                content: '4A'
+            }
+
+            &.a5::before {
+                content: '5A'
+            }
+        }
+
+        .sct-title {
+            font-size: 15px;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1;
+            padding: rem(16) 0 rem(12);
+        }
+
+        .sct-time {
+            line-height: 1;
+            font-size: 13px;
+            color: #9CA6B0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    height: rem(100);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #EAEEF0;
+    box-sizing: border-box;
+
+    >a {
+        flex: 1;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        // color:rgba(34,200,216,1);
+        color: #999;
+    }
+
+    img {
+        width: rem(44);
+        margin-bottom: rem(10);
+    }
+}
+
+// 轮播图
+.swiper-banner {
+    height: rem(284);
+
+    .swiper-pagination {
+        padding-bottom: rem(20);
+    }
+
+    a,
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        object-fit: cover
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #fff;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #22C8D8;
+    }
+}
+
+/**
+* 图书馆样式
+*/
+.swiper-section {
+    padding-bottom: rem(30);
+
+    .book_wrapper {
+        margin: auto;
+        width: rem(180);
+        font-size: 13px;
+        color: rgba(51, 51, 51, 1);
+        padding-bottom: rem(30);
+    }
+
+    .book_pic {
+        height: rem(260);
+        margin-bottom: rem(20);
+        border-radius: 2px;
+        overflow: hidden;
+
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-pagination {
+        padding-bottom: rem(0);
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #E4E7EA;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #22C8D8;
+    }
+}
+
+.ranking {
+    padding-top: rem(30);
+
+    .h1 {
+        padding-bottom: 0;
+    }
+}
+
+.ranking_cardwrapper {
+    padding: 0 rem(30);
+
+    &.category .rc_item .book_body {
+        padding-top: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .rc_item {
+        display: flex;
+        padding: rem(30) 0;
+        border-bottom: 1px solid #EAEEF0;
+
+        &:nth-of-type(1) .book_body::before {
+            content: 'TOP.1';
+            background-color: #FAAD14;
+        }
+
+        &:nth-of-type(2) .book_body::before {
+            content: 'TOP.2';
+            background-color: #22C8D8;
+        }
+
+        &:nth-of-type(3) .book_body::before {
+            content: 'TOP.3';
+            background-color: #31CF94;
+        }
+
+        .book_body {
+            padding-top: rem(50);
+            position: relative;
+
+            &::before {
+                // content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0 rem(20);
+                line-height: rem(40);
+                border-radius: 0 4px 0 4px;
+                font-size: 12px;
+                // font-family: DINPro;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 1);
+                transform: scale(.833);
+                transform-origin: left top;
+            }
+        }
+    }
+
+    // 右侧内容区块
+    .book_wrapper {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    // 左侧图片区块
+    .book_pic {
+        flex-shrink: 0;
+        width: rem(180);
+        height: rem(260);
+        border-radius: 2px;
+        overflow: hidden;
+        margin-right: rem(20);
+
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .book_name {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(51, 51, 51, 1);
+        line-height: 1;
+        padding-bottom: rem(14);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .book_cont {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 12px;
+        color: rgba(102, 102, 102, 1);
+        line-height: 18px;
+    }
+
+    .tips {
+        height: rem(50);
+        border-radius: 4px;
+        background-color: #F3F6F9;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: rgba(153, 153, 153, 1);
+        padding-left: rem(10);
+    }
+
+    .book_stock {
+        font-size: 13px;
+        color: rgba(34, 200, 216, 1);
+        display: flex;
+        align-items: center;
+        .icon_book {
+            width: rem(25);
+            margin-right: 4px;
+        }
+    }
+}
+
+// 大家都喜欢
+.hot_act {
+    padding: rem(30);
+    background-color: #fff;
+    padding-bottom: rem(100);
+
+    .hot_title {
+        font-size: 18px;
+        line-height: 1;
+        padding: rem(20) 0;
+        font-weight: bold;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .hot_bd {
+        // padding: 0 rem(30);
+        // overflow-x: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        .act_item {
+            margin-bottom: rem(10);
+            width: rem(180);
+            flex-shrink: 0;
+
+            // margin-right: rem(20);
+            &:nth-of-type(1) .act_pic::after {
+                content: 'TOP.4',
+            }
+
+            &:nth-of-type(2) .act_pic::after {
+                content: 'TOP.5',
+            }
+
+            &:nth-of-type(3) .act_pic::after {
+                content: 'TOP.6',
+            }
+
+            &:nth-of-type(4) .act_pic::after {
+                content: 'TOP.7',
+            }
+
+            &:nth-of-type(5) .act_pic::after {
+                content: 'TOP.8',
+            }
+
+            &:nth-of-type(6) .act_pic::after {
+                content: 'TOP.9',
+            }
+        }
+
+        .act_pic {
+            height: rem(260);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: rem(20);
+            position: relative;
+
+            &::after {
+                // content: '11';
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 0 rem(20);
+                line-height: rem(40);
+                font-size: 12px;
+                // font-family: DINPro;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 1);
+                background: rgba(51, 51, 51, .8);
+                transform: scale(.833);
+                transform-origin: right top;
+            }
+
+            >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover
+            }
+        }
+
+        .act_title {
+            font-size: 15px;
+            color: #373844;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+/**
+* 图书分类页样式
+*/
+.category_tab {
+    padding: rem(30);
+    padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    span {
+        padding: rem(18) rem(20);
+        margin-right: rem(20);
+        margin-bottom: rem(20);
+        font-size: 13px;
+        color:rgba(153,153,153,1);
+        line-height: 1;
+        border: 1px solid #999;
+        border-radius: 2px;
+        &:first-of-type {
+            padding: rem(18) rem(45);
+        }
+        &.active {
+            color: rgba(34,200,216,1);
+            background-color: rgba(34,200,216,.3);
+            border: none;
+        }
+    }
+}
+
+footer {
+    height: rem(100);
+    display: flex;
+
+    >a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: rgba(153, 153, 153, 1);
+
+        &.active {
+            color: #22C8D8;
+        }
+    }
+
+    .icon {
+        width: rem(44);
+        margin-bottom: 4px;
+    }
+}
+
+/**
+* 图书馆详情页
+*/
+.libray_info {
+    background: linear-gradient(to bottom, #22C8D8, rgba(34, 200, 216, .1));
+    padding: 0;
+    margin: 0;
+    .book_name, .book_cont {
+        color: #fff;
+    }
+    .rc_item {
+        border-bottom: none;
+    }
+}
+.book_info {
+    padding: rem(30);
+    background-color: #fff;
+    .book_title {
+        font-size: 18px;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+        line-height: 1;
+        padding-bottom: rem(10);
+    }
+    .book_desc {
+        font-size: 14px;
+        color:rgba(51,51,51,1);
+        line-height:20px;
+    }
+}
+
+// 重置swiper
+.swiper-container {
+    .swiper-pagination-bullet {
+        // background-color: #fff;
+        opacity: 1;
+        width: 4px;
+        height: 4px;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: rem(27);
+        border-radius: 2px;
+        transition: width .3s;
+        // background-color: #22C8D8;
+    }
+}
+
+// 重置 placeholder
+input::-webkit-input-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+    font-size: 14px;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #999;
+    font-size: 14px;
+}

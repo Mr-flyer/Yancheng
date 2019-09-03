@@ -1,0 +1,127 @@
+* { word-wrap: break-word; word-break: break-all; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+
+html, body, div, span, p, a, img, ul, li, q { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { line-height: 1; background-color: #fff; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ''; content: none; }
+
+a, a:active, a:hover { text-decoration: none; -webkit-appearance: none; }
+
+img { vertical-align: middle; border: none; -webkit-touch-callout: none; }
+
+ul, ol, dl { list-style-type: none; list-style: none; }
+
+input, button { -webkit-appearance: none; outline: none; border: none; font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; }
+
+div, input, li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.full, html, body { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; }
+
+body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; position: relative; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; font-size: 16px; }
+
+html { font-size: 20vw; }
+
+@media screen and (max-width: 320px) { html { font-size: 64px; } }
+
+@media screen and (min-width: 540px) { html { font-size: 108px; } }
+
+body { min-width: 320px; max-width: 540px; margin: 0 auto; }
+
+.line-camp { text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.dv { width: 2rem; height: 2rem; background-color: aqua; border: 1px solid #000; }
+
+.weui-header { height: 2.93333rem; width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+.food_bg { width: 5rem; height: 2.93333rem; position: absolute; top: 0; left: 0; }
+
+.food_bg > img { width: 100%; height: 100%; }
+
+.food_weather_info { margin-top: 0.95333rem; margin-left: 4.16rem; font-size: 0.24rem; font-family: PingFang SC; font-weight: 500; color: white; line-height: 1; z-index: 102; }
+
+.food_weather { margin-right: 0.07333rem; }
+
+.weui-content { padding: 0rem 0.2rem 0rem 0.2rem; transform: translateY(-28vw); background-color: #FFFFFF; }
+
+.food_title { display: flex; align-items: center; justify-content: space-between; }
+
+.wy-Module { padding: 0.19333rem 0rem 0.14667rem 0rem; border-bottom: 1px solid #FFFFFF; }
+
+.wy-Module-con { margin-top: 0.13333rem; }
+
+.food_first_title { font-size: 0.24rem; font-family: PingFang SC; font-weight: 500; color: #333333; line-height: 0.28rem; }
+
+.food_second_title { width: 6px; height: 0.14rem; display: flex; align-items: center; justify-content: center; }
+
+.food_second_title > img { width: 100%; height: 100%; }
+
+.swiper-slide > a > div { display: flex; flex-direction: column; justify-content: center; }
+
+.food_img { width: 100%; height: 100%; border-radius: 8px; }
+
+.food_img > img { width: 100%; height: 100%; }
+
+.food_name { font-size: 0.17333rem; font-family: PingFang SC; font-weight: 500; color: #333333; line-height: 1; margin-top: 0.13333rem; }
+
+.food_hotel { display: flex; flex-direction: column; height: 100%; }
+
+.hotel_lists { width: 4.6rem; display: flex; flex-wrap: wrap; }
+
+.hotel_list { display: flex; height: 2.28667rem; flex: 1; }
+
+.wy-pro-list li { margin-left: 0; }
+
+.food_hotel_pic { width: 2.24667rem; height: 1.68rem; border-radius: 8px; }
+
+.food_hotel_pic > img { width: 100%; height: 100%; }
+
+.food_hotel_info { display: flex; flex-direction: column; padding: 0.12667rem 0 0.19333rem 0; justify-content: space-between; }
+
+.food_hotel_name { font-size: 0.17333rem; font-family: PingFang SC; font-weight: 500; color: #333333; line-height: 1; }
+
+.food_hotel_priceAndLove { display: flex; align-items: center; margin-top: 0.16667rem; }
+
+.food_hotel_prices { font-size: 0.12rem; font-family: PingFang SC; font-weight: 400; color: #9ca6b0; }
+
+.food_hotel_price { font-size: 0.24rem; font-family: PingFang SC; font-weight: bold; color: #ff6653; margin-right: 0.02667rem; margin-left: 0.02667rem; }
+
+.wy-pro-list li { background: #ffffff; }
+
+.morelink { height: 0.45333rem; width: 4.54667rem; background: #f5fdfe; display: flex; align-items: center; justify-content: center; font-size: 0.16rem; font-family: PingFang SC; font-weight: 400; color: #999999; line-height: 1; margin-top: 0.08rem; }
+
+.food_bottom_tabbar { display: flex; justify-content: space-around; align-items: center; width: 5rem; height: 0.65333rem; background: white; box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.04); transform: translateY(-28vw); }
+
+.food_tabbar { display: flex; flex-direction: column; align-items: center; }
+
+.food_tabbar > div:first-of-type { width: 0.27333rem; height: 0.26rem; display: flex; align-items: center; justify-content: center; }
+
+.food_tabbar > div:first-of-type > img { width: 100%; height: 100%; }
+
+.weui-tabbar_label { font-size: 0.13333rem; font-family: PingFang SC; font-weight: 400; color: #999999; margin-top: 0.08rem; }
+
+.search_container { position: absolute; top: 0; left: 0; z-index: 1; width: 100%; padding: 0.13333rem 0.2rem 0.06667rem; box-sizing: border-box; }
+
+.search_container .search_box { padding: 0 0.2rem; height: 0.44rem; border-radius: 0.22rem; background-color: white; display: flex; justify-content: center; align-items: center; }
+
+.search_container .search_box > img { width: 0.16rem; }
+
+.search_container .search_box > input { width: 2.33333rem; align-self: stretch; background-color: transparent; padding-left: 0.13333rem; }
+
+.search_container .search_box input:focus { flex: 1; }
+
+.search_container .search_box input::-webkit-input-placeholder { color: rgba(153, 153, 153, 0.6); font-size: 14px; }
+
+.search_container .search_box input::-moz-input-placeholder { color: rgba(153, 153, 153, 0.6); font-size: 14px; }
+
+.search_container .search_box input::-ms-input-placeholder { color: rgba(153, 153, 153, 0.6); font-size: 14px; }
+
+.wy-pro-list li { margin-bottom: 0rem; }

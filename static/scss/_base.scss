@@ -1,0 +1,144 @@
+* {
+  word-wrap: break-word;
+  word-break: break-all;
+  -webkit-touch-callout: none; // 禁用谷歌长按系统文本提示
+  -webkit-tap-highlight-color: transparent; // 去除移动端长安高亮背景
+}
+html,
+body,
+div,
+span,
+p,
+a,
+img,
+ul,
+li,
+q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+html,
+body {
+  line-height: 1;
+  background-color: #fff;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, i
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q,
+blockquote {
+  quotes: none;
+  &::before,
+  &::after {
+    content: '';
+    content: none;
+  }
+}
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+  -webkit-appearance: none;
+}
+img {
+  vertical-align: middle;
+  border: none;
+  -webkit-touch-callout: none;
+}
+ul,
+ol,
+dl {
+  list-style-type: none;
+  list-style: none;
+}
+input, button {
+  -webkit-appearance: none; // 去除系统默认 表单控件样式
+  outline: none;
+  border: none;
+  font-family:'PingFang SC','Microsoft YaHei','SimSun','Arial', sans-serif;
+  // font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif;
+}
+div,
+input,
+li {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.full,
+html,
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  // height: 100%;
+  height: auto;
+}
+body {
+  font-family:'PingFang SC','Microsoft YaHei','SimSun','Arial', sans-serif;
+  // font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif;
+  position: relative;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important; // 移动端字号适配
+  font-size: 16px;
+}
+
+
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  > .err {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.weui-content {
+  position: relative;
+  padding-top: 50px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;  // 开启 ios滑动 硬件加载
+  box-sizing: content-box;
+}
+
+.weui-pull-to-refresh__layer {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+}

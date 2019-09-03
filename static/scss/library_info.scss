@@ -1,0 +1,196 @@
+@import './_base';
+@import './_tool';
+
+section {
+    background-color: #fff;
+}
+
+section {
+    margin-bottom: rem(10);
+
+    .h1 {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(55, 56, 68, 1);
+        line-height: 1;
+        padding: 0 rem(30);
+        padding-bottom: rem(20);
+    }
+}
+
+.ranking {
+    padding-top: rem(30);
+
+    .h1 {
+        padding-bottom: 0;
+    }
+}
+
+.ranking_cardwrapper {
+    padding: 0 rem(30);
+
+    &.category .rc_item .book_body {
+        padding-top: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .rc_item {
+        display: flex;
+        padding: rem(30) 0;
+        border-bottom: 1px solid #EAEEF0;
+
+        &:nth-of-type(1) .book_body::before {
+            content: 'TOP.1';
+            background-color: #FAAD14;
+        }
+
+        &:nth-of-type(2) .book_body::before {
+            content: 'TOP.2';
+            background-color: #22C8D8;
+        }
+
+        &:nth-of-type(3) .book_body::before {
+            content: 'TOP.3';
+            background-color: #31CF94;
+        }
+
+        .book_body {
+            padding-top: rem(50);
+            position: relative;
+
+            &::before {
+                // content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0 rem(20);
+                line-height: rem(40);
+                border-radius: 0 4px 0 4px;
+                font-size: 12px;
+                // font-family: DINPro;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 1);
+                transform: scale(.833);
+                transform-origin: left top;
+            }
+        }
+    }
+
+    // 右侧内容区块
+    .book_wrapper {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    // 左侧图片区块
+    .book_pic {
+        flex-shrink: 0;
+        width: rem(180);
+        height: rem(260);
+        border-radius: 2px;
+        overflow: hidden;
+        margin-right: rem(20);
+
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .book_name {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(51, 51, 51, 1);
+        line-height: 1;
+        padding-bottom: rem(14);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .book_cont {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 12px;
+        color: rgba(102, 102, 102, 1);
+        line-height: 18px;
+    }
+
+    .tips {
+        height: rem(50);
+        border-radius: 4px;
+        background-color: #F3F6F9;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: rgba(153, 153, 153, 1);
+        padding-left: rem(10);
+    }
+
+    .book_stock {
+        font-size: 13px;
+        color: rgba(34, 200, 216, 1);
+        display: flex;
+        align-items: center;
+
+        .icon_book {
+            width: rem(25);
+            margin-right: 4px;
+        }
+    }
+}
+
+
+/**
+* 图书馆详情页
+*/
+.libray_info {
+    background: linear-gradient(to bottom, #22C8D8, rgba(34, 200, 216, .1));
+    padding: 0;
+    margin: 0;
+
+    .book_name,
+    .book_cont {
+        color: #fff;
+    }
+
+    .rc_item {
+        border-bottom: none;
+    }
+}
+
+.book_info {
+    padding: rem(30);
+    background-color: #fff;
+
+    .book_title {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(51, 51, 51, 1);
+        line-height: 1;
+        padding-bottom: rem(10);
+    }
+
+    .book_desc {
+        font-size: 14px;
+        color: rgba(51, 51, 51, 1);
+        line-height: 20px;
+    }
+}
+
+.weui-media-box_appmsg {
+    height: rem(68);
+}
+.wy-media-box2 {
+    margin: 0;
+    border: none;
+}

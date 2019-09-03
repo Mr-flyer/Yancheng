@@ -1,0 +1,91 @@
+* { word-wrap: break-word; word-break: break-all; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+
+html, body, div, span, p, a, img, ul, li, q { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { line-height: 1; background-color: #fff; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ''; content: none; }
+
+a, a:active, a:hover { text-decoration: none; -webkit-appearance: none; }
+
+img { vertical-align: middle; border: none; -webkit-touch-callout: none; }
+
+ul, ol, dl { list-style-type: none; list-style: none; }
+
+input, button { -webkit-appearance: none; outline: none; border: none; font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; }
+
+div, input, li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.full, html, body { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; }
+
+body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; position: relative; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; font-size: 16px; }
+
+html { font-size: 20vw; }
+
+@media screen and (max-width: 320px) { html { font-size: 64px; } }
+
+@media screen and (min-width: 540px) { html { font-size: 108px; } }
+
+body { min-width: 320px; max-width: 540px; margin: 0 auto; }
+
+.line-camp { text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.dv { width: 2rem; height: 2rem; background-color: aqua; border: 1px solid #000; }
+
+.hotel_container { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.restaurant_shows { display: flex; overflow-x: auto; margin-top: 0.2rem; padding: 0 0rem 0.2rem 0rem; }
+
+.restaurant_show { flex-shrink: 0; width: 2.22667rem; height: 1.33333rem; border-radius: 8px; margin-right: 0.13333rem; border-radius: 8px; position: relative; }
+
+.restaurant_show > img { width: 100%; height: 100%; }
+
+.hotelShow_information { width: 4.6rem; display: flex; flex-direction: column; background-color: white; background: url("../images/tourinfo_cardbg.png") right bottom no-repeat; background-size: 20% 20%; }
+
+.hotelShow_information_up { display: flex; flex-direction: column; padding: 0.2rem 0rem 0rem 0rem; background-color: white; }
+
+.hotelShow_info { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+
+.hotelShow_hotel_name { font-size: 0.29333rem; font-family: PingFang SC; font-weight: bold; color: #333333; }
+
+.hotelShow_hotel_price { font-size: 0.14667rem; font-family: PingFang SC; font-weight: 500; color: #666666; line-height: 0.2rem; display: flex; align-items: center; justify-content: center; }
+
+.hotelShow_hotelPrice { font-size: 0.29333rem; font-family: PingFang SC; font-weight: 500; color: #22c8d8; line-height: 0.38667rem; margin-right: 6px; }
+
+.hotelShow_info_labels { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 0.22667rem; }
+
+.hotelShow_zhonglei { align-self: flex-start; font-size: 0.18667rem; font-family: PingFang SC; font-weight: 500; color: #333333; }
+
+.hotelShow_info_label { margin-top: 0.1rem; width: 100%; display: flex; }
+
+.hotelShow_info_label > div { width: 0.8rem; height: 0.25333rem; margin-right: 0.06667rem; display: flex; align-items: center; justify-content: center; height: 0.25333rem; font-size: 0.14667rem; font-family: PingFang SC; font-weight: 500; }
+
+.hotelShow_information_down { display: flex; flex-direction: column; align-content: center; justify-content: center; }
+
+.hotelShow_phone { display: flex; justify-content: space-between; align-items: center; height: 0.55333rem; border-bottom: 2px solid #f3f6f9; }
+
+.hotelShow_phone > div:first-of-type { font-size: 0.18667rem; font-family: PingFang SC; font-weight: 500; color: #333333; display: flex; align-items: center; justify-content: center; line-height: 0.28rem; }
+
+.hotelShow_location { display: flex; justify-content: space-between; align-items: center; height: 0.68rem; border-bottom: 2px solid #f3f6f9; }
+
+.hotelShow_phone_icon { width: 0.18rem; height: 0.18rem; display: flex; align-items: center; justify-content: center; }
+
+.hotelShow_phone_icon > img { width: 100%; height: 100%; }
+
+.hotelShow_location_icon { width: 0.18rem; height: 0.18rem; display: flex; align-items: center; justify-content: center; }
+
+.hotelShow_location_icon > img { width: 100%; height: 100%; }
+
+.hotelShow_location > div:first-of-type { font-size: 0.18667rem; font-family: PingFang SC; font-weight: 500; color: #333333; line-height: 0.28rem; display: flex; align-items: center; justify-content: center; }
+
+.hotelShow_introduction { width: 4.6rem; overflow: hidden; }
+
+.hotelShow_information > img { width: 100%; }

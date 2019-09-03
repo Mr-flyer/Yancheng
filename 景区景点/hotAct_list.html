@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>热门活动列表页</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/hotAct_list.css">
+</head>
+
+<body ontouchstart>
+    <div class="container">
+        <div class="weui-content" id="listwrap">
+
+            <!--下拉刷新-->
+            <div class="weui-pull-to-refresh__layer">
+                <div class="weui-pull-to-refresh__arrow"></div>
+                <div class="weui-pull-to-refresh__preloader"></div>
+                <div class="down">下拉刷新</div>
+                <div class="up">释放刷新</div>
+                <div class="refresh">正在刷新</div>
+            </div>
+            <div class="weui-panel__bd">
+                <!-- 卡片 -->
+                <a href="../景区景点/hotAct_info.html" class="weui-media-box weui-media-box_appmsg">
+                    <div class="weui-media-box__hd">
+                        <img class="weui-media-box__thumb" src="./images/Mrflyer.jpg">
+                    </div>
+                    <div class="weui-media-box__bd">
+                        <h4 class="weui-media-box__title">助力文明城市，全城争做最美盐城人助力文明城市，全城争做最美盐城人助力文明城市，全城争做最美盐城人</h4>
+                        <div class="weui-media-box__desc">
+                            <p class="card-time">时间：<span>2019.8.30-2019.10.2</span></p>
+                            <p class="card-locate">地点：<span>江苏省盐城市盐都区郭猛镇杨侍村郭西北路888号</span></p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 卡片 -->
+                <a href="../景区景点/hotAct_info.html" class="weui-media-box weui-media-box_appmsg">
+                    <div class="weui-media-box__hd">
+                        <img class="weui-media-box__thumb" src="./images/Mrflyer.jpg">
+                    </div>
+                    <div class="weui-media-box__bd">
+                        <h4 class="weui-media-box__title">标题二</h4>
+                        <div class="weui-media-box__desc">
+                            <p class="card-time">时间：<span>2019.8.30-2019.10.2</span></p>
+                            <p class="card-locate">地点：<span>江苏省盐城市盐都区郭猛镇杨侍村郭西北路888号</span></p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 卡片 -->
+                <a href="../景区景点/hotAct_info.html" class="weui-media-box weui-media-box_appmsg">
+                    <div class="weui-media-box__hd">
+                        <img class="weui-media-box__thumb" src="./images/Mrflyer.jpg">
+                    </div>
+                    <div class="weui-media-box__bd">
+                        <h4 class="weui-media-box__title">标题二</h4>
+                        <div class="weui-media-box__desc">
+                            <p class="card-time">时间：<span>2019.8.30-2019.10.2</span></p>
+                            <p class="card-locate">地点：<span>江苏省盐城市盐都区郭猛镇杨侍村郭西北路888号</span></p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <!-- 上拉加载更多 -->
+            <div class="weui-loadmore" style="padding-bottom:60px;height:20px">
+                <span class="weui-loadmore__tips"><i class="weui-loading"></i>正在加载</span>
+            </div>
+        </div>
+        <footer>
+            <a href="../景区景点/index.html">
+                <img src="images/icon_nav_index.png">
+                <span>首页</span>
+            </a>
+            <!-- <a href="../景区景点/strategy_list.html">
+                <img src="images/icon_nav_tours.png">
+                <span>景点</span>
+            </a> -->
+            <a href="../景区景点/hotAct_list.html">
+                <img src="images/icon_nav_touractive_active.png">
+                <span>活动</span>
+            </a>
+            <a href="../景区景点/userTourism.html">
+                <img src="images/icon_nav_touruser.png">
+                <span>我的</span>
+            </a>
+        </footer>
+    </div>
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script src="lib/fastclick.js"></script>
+    <script src="https://unpkg.com/art-template@4.13.2/lib/template-web.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/config.js"></script>
+</body>
+
+
+<!-- 热门活动的模板 -->
+<script id="HotAct_template" type="text/html">
+    {{each data}}
+    <a href="../景区景点/hotAct_info.html" class="weui-media-box weui-media-box_appmsg">
+        <div class="weui-media-box__hd">
+            <img class="weui-media-box__thumb" src="{{$value.scenic_activity_icon}}">
+        </div>
+        <div class="weui-media-box__bd">
+            <h4 class="weui-media-box__title">{{$value.scenic_activity_name}}</h4>
+            <div class="weui-media-box__desc">
+                <p class="card-time">时间：<span>{{$value.scenic_activity_start}}</span></p>
+                <p class="card-locate">地点：<span>{{$value.scenic_area_name}}}</span></p>
+            </div>
+        </div>
+    </a>
+    {{/each}}
+</script>
+
+<script>
+    $("#listwrap").pullToRefreshDone(); // 重置下拉刷新
+    let listData = []
+    let flag = true,
+        page = 1;
+    id = 1 // --------------------------------------------------  活动ID ---------------------------------
+
+    function init() {
+        $.ajax({
+            url: `${baseUrl}/api/v1/scenicact/readall`,
+            data: {
+                id: 1
+            },
+            success(res) {
+                let {
+                    error_code,
+                    data: {
+                        items: data
+                    }
+                } = res
+                listData = data
+                if (error_code === 0) {
+                    // console.log(data);
+                    console.log(res.data);
+
+                    console.log(template('HotAct_template', {
+                        data: listData
+                    }))
+                    $('.weui-panel__bd').append(template('HotAct_template', {
+                        data: listData
+                    }))
+                }
+                $("#listwrap").pullToRefreshDone(); // 重置下拉刷新
+            },
+
+            error(err) {
+                $('.container').html('<img class="err" src="images/error.png" alt="">')
+            }
+        })
+    }
+    //============================ 下拉刷新
+    $("#listwrap").pullToRefresh().on("pull-to-refresh", function() {
+        init()
+    });
+
+    //============================滚动加载
+    $("#listwrap").infinite().on("infinite", function() {
+        //     if (flag) {
+        //         // console.log('加载中');
+        //         // $('.weui-loadmore').find('.weui-loading').show();
+        //         $('.weui-loadmore').find('.weui-loadmore__tips').text('加载中');
+        //         flag = false
+        //         page = page + 1
+        //         $.ajax({
+        //             url: `${baseUrl}v1/lineinfo/readall`,
+        //             data: {
+        //                 id: 1
+        //             },
+        //             success(res) {
+        //                 let {
+        //                     error_code,
+        //                     data: {
+        //                         items: data
+        //                     }
+        //                 } = res
+        //                 listData = data
+        //                 if (error_code === 0) {
+        //                     // console.log(data);
+        //                     console.log(res.data);
+        //                     $('.weui-panel__bd').html(template('HotAct_template', {
+        //                         data: listData
+        //                     }))
+        //                 }
+        //                 flag = true
+        //                 $("#listwrap").pullToRefreshDone(); // 重置下拉刷新
+        //             },
+
+        //             error(err) {
+        //                 $('.container').html('<img class="err" src="images/error.png" alt="">')
+        //             }
+        //         })
+
+        //     }
+
+    });
+</script>
+
+</html>

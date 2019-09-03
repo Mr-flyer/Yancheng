@@ -1,0 +1,87 @@
+* { word-wrap: break-word; word-break: break-all; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+
+html, body, div, span, p, a, img, ul, li, q { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { line-height: 1; background-color: #fff; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ''; content: none; }
+
+a, a:active, a:hover { text-decoration: none; -webkit-appearance: none; }
+
+img { vertical-align: middle; border: none; -webkit-touch-callout: none; }
+
+ul, ol, dl { list-style-type: none; list-style: none; }
+
+input, button { -webkit-appearance: none; outline: none; border: none; font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; }
+
+div, input, li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.full, html, body { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; }
+
+body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; position: relative; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; font-size: 16px; }
+
+html { font-size: 20vw; }
+
+@media screen and (max-width: 320px) { html { font-size: 64px; } }
+
+@media screen and (min-width: 540px) { html { font-size: 108px; } }
+
+body { min-width: 320px; max-width: 540px; margin: 0 auto; }
+
+.line-camp { text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.dv { width: 2rem; height: 2rem; background-color: aqua; border: 1px solid #000; }
+
+.hotel_search { margin-top: 0.2rem; width: 100vw; display: flex; align-items: center; padding: 0rem 0.2rem 0rem 0.2rem; }
+
+.hotel_input { width: 4.6rem; height: 0.44rem; }
+
+.hotel_input_search { width: 4.6rem; height: 0.44rem; background: #f3f6f9; border-radius: 0.22rem; padding: 0rem 0rem 0rem 0.22rem; }
+
+.hotel_choose { display: flex; justify-content: space-between; padding: 0rem 0.50667rem 0rem 0.3rem; margin-top: 0.2rem; }
+
+.hotel_choose > div { display: flex; align-items: center; }
+
+.hotel_choose > div > div:first-of-type { font-size: 0.2rem; font-family: PingFang SC; font-weight: 500; }
+
+.hotel_AI > div:last-of-type { width: 0.10667rem; height: 0.06667rem; display: flex; align-items: center; justify-content: center; }
+
+.hotel_AI > div:last-of-type > img { width: 100%; height: 100%; }
+
+.hotel_distance > div:last-of-type { width: 0.10667rem; height: 0.06667rem; display: flex; align-items: center; justify-content: center; }
+
+.hotel_distance > div:last-of-type > img { width: 100%; height: 100%; }
+
+.hotel_area > div:last-of-type { width: 0.10667rem; height: 0.06667rem; display: flex; align-items: center; justify-content: center; }
+
+.hotel_area > div:last-of-type > img { width: 100%; height: 100%; }
+
+.hotel_lists { margin-top: 0.26667rem; padding: 0rem 0.2rem 0rem 0.2rem; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+
+.restaurant_list { width: 100%; height: 1.05333rem; display: flex; align-items: flex-start; justify-content: flex-start; margin-bottom: 0.40667rem; }
+
+.restaurant_list_img { width: 1.50667rem; height: 1.05333rem; border-radius: 8px; }
+
+.restaurant_list_img > img { width: 100%; height: 100%; }
+
+.restaurant_list_info { margin-left: 0.15333rem; display: flex; flex-direction: column; height: 100%; justify-content: space-between; }
+
+.restaurant_list_info_name { font-size: 0.22667rem; font-family: PingFang SC; font-weight: 500; color: #333333; }
+
+.restaurant_list_info_leibie { font-size: 0.17333rem; font-family: PingFang SC; font-weight: 400; color: #999999; }
+
+.restaurant_list_info_location { display: flex; align-items: center; justify-content: center; }
+
+.restaurant_list_info_location_icon { width: 0.16rem; height: 0.18rem; display: flex; align-items: center; justify-content: center; margin-right: 0.08rem; }
+
+.restaurant_list_info_location_icon > img { width: 100%; height: 100%; }
+
+.restaurant_list_info_location_text { font-size: 0.17333rem; font-family: PingFang SC; font-weight: 400; color: #999999; }

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>景区景点</title>
+  <!-- 设置基础路径 start -->
+  <base href="../static/">
+  <!-- 设置基础路径 end -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="lib/weui.min.css">
+  <link rel="stylesheet" href="css/jquery-weui.css">
+  <link rel="stylesheet" href="css/index_tourism.css">
+  <link rel="stylesheet" href="css/index_commit.css">
+</head>
+
+<body ontouchstart>
+  <div class="container">
+    <!--主体-->
+    <div class='weui-content weui-pull-to-refresh' id="listwrap">
+      <!--下拉刷新-->
+      <div class="weui-pull-to-refresh__layer">
+        <div class="weui-pull-to-refresh__arrow"></div>
+        <div class="weui-pull-to-refresh__preloader"></div>
+        <div class="down">下拉刷新</div>
+        <div class="up">释放刷新</div>
+        <div class="refresh">正在刷新</div>
+      </div>
+      <!-- 头部 -->
+      <header>
+        <!--顶部搜索-->
+        <div class="search-container">
+          <div class="search-wrapper">
+            <img class="icon_search" src="images/icon_search_gray.png" />
+            <input type="search" placeholder="搜索目的地/景点" />
+          </div>
+        </div>
+        <!--顶部轮播-->
+        <div class="swiper-container swiper-banner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="javascript:void(0);"><img src="upload/ban1.jpg" /></a></div>
+            <div class="swiper-slide"><a href="javascript:void(0);"><img src="upload/ban2.jpg" /></a></div>
+            <div class="swiper-slide"><a href="javascript:void(0);"><img src="upload/ban3.jpg" /></a></div>
+            <div class="swiper-slide"><a href="javascript:void(0);"><img src="upload/ban4.jpg" /></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <nav>
+            <a href="../景区景点/family_list.html">
+                <img class="icon" src="images/nav_tourism01.png" alt="">
+                <span>热门线路</span>
+            </a>
+            <a href="../景区景点/food.html">
+                <img class="icon" src="images/nav_tourism02.png" alt="">
+                <span>美食住宿</span>
+            </a>
+            <a href="../景区景点/strategy_info.html">
+                <img class="icon" src="images/nav_tourism03.png" alt="">
+                <span>游记攻略</span>
+            </a>
+        </nav>
+      </header>
+      <!--热门活动-->
+      <div class="hot-activity">
+        <a class="hota-hd" href="../景区景点/hotAct_list.html">
+          <span class="hota-title">热门活动</span>
+        </a>
+        <div class="hota-bd">
+          <div class="hote-cont">
+            <div class="hota-item">
+              <img src="images/pic_160.png" alt="">
+              <div class="hota-mask">
+                盐城生态园 <br />
+                草莓采摘季
+              </div>
+            </div>
+            <div class="hota-item">
+              <img src="images/pic_160.png" alt="">
+              <div class="hota-mask">
+                盐城生态园 <br />
+                草莓采摘季
+              </div>
+            </div>
+            <div class="hota-item">
+              <img src="images/pic_160.png" alt="">
+              <div class="hota-mask">
+                盐城生态园 <br />
+                草莓采摘季
+              </div>
+            </div>
+            <div class="hota-item">
+              <img src="images/pic_160.png" alt="">
+              <div class="hota-mask">
+                盐城生态园 <br />
+                草莓采摘季
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--景区-->
+      <div class="hot-scenic">
+        <!-- 左侧菜单栏 -->
+        <aside>
+          <ul>
+            <li class="active">热门景区</li>
+            <li>亭湖区</li>
+            <li>经济技术开发区</li>
+            <li>盐南高新区</li>
+            <li>热门景区</li>
+            <li>亭湖区</li>
+            <li>经济技术开发区</li>
+            <li>盐南高新区</li>
+            <li>热门景区</li>
+            <li>亭湖区</li>
+            <li>经济技术开发区</li>
+            <li>盐南高新区</li>
+            <li>热门景区</li>
+            <li>亭湖区</li>
+          </ul>
+        </aside>
+        <!-- 右侧景区 -->
+        <section>
+          <div class="sct-item">
+            <div class="sct-hd a4">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">大纵湖</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">施耐庵纪念馆</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd a5">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">丹顶鹤自然保护区丹顶鹤自然保护区</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd a4">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">大纵湖</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">施耐庵纪念馆</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd a5">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">丹顶鹤自然保护区丹顶鹤自然保护区</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd a4">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">大纵湖</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">施耐庵纪念馆</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd a5">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">丹顶鹤自然保护区丹顶鹤自然保护区</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">施耐庵纪念馆</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd a5">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">丹顶鹤自然保护区丹顶鹤自然保护区</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">施耐庵纪念馆</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+          <div class="sct-item">
+            <div class="sct-hd a5">
+              <img src="images/pic_160.png" alt="">
+            </div>
+            <div class="sct-bd">
+              <div class="sct-title">丹顶鹤自然保护区丹顶鹤自然保护区</div>
+              <p class="sct-time">08:00 — 17:00</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <a href="javascript:void(0);">
+      <img src="images/icon_nav_index_active.png">
+      <span>首页</span>
+    </a>
+    <!-- <a href="../景区景点/strategy_list.html">
+      <img src="images/icon_nav_tours.png">
+      <span>景点</span>
+    </a> -->
+    <a href="../景区景点/hotAct_list.html">
+      <img src="images/icon_nav_touractive.png">
+      <span>活动</span>
+    </a>
+    <a href="../景区景点/userTourism.html">
+      <img src="images/icon_nav_touruser.png">
+      <span>我的</span>
+    </a>
+  </footer>
+
+  <script src="lib/jquery-2.1.4.js"></script>
+  <script src="lib/fastclick.js"></script>
+  <script src="https://unpkg.com/art-template@4.13.2/lib/template-web.js"></script>
+  <script src="js/jquery-weui.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="../static/js/config.js"></script>
+  <script id="bannerTmp" type="text/html">
+    {{each data }}
+    <div class="swiper-slide">
+      <a href="javascript:void(0);"><img src="{{$value.banner_img}}" /></a>
+    </div>
+    {{/each}}
+  </script>
+  <script id="hotactTmp" type="text/html">
+    {{each data}}
+    <div class="hota-item">
+      <img src="{{$value.scenic_activity_icon}}" alt="">
+      <div class="hota-mask">
+        <span>{{$value.scenic_activity_name}}</span>
+      </div>
+    </div>
+    {{/each}}
+  </script>
+  <script id="asideTmp" type="text/html">
+    <ul>
+      {{each data}}
+      <li class="{{$index ? '' : 'active'}}" data-id="{{$value.area_fid}}">{{$value.area_name}}</li>
+      {{/each}}
+    </ul>
+  </script>
+  <script id="tourismListTmp" type="text/html">
+    {{each data}}
+    <a href="/景区景点/tourism_info.html?id={{$value.id}}" class="sct-item">
+      <div class="sct-hd ">
+        <img src="{{$value.scenic_area_icon_img}}" alt="">
+      </div>
+      <div class="sct-bd">
+        <div class="sct-title">{{$value.scenic_area_name}}</div>
+        <p class="sct-time">{{$value.scenic_area_time}}</p>
+      </div>
+    </a>
+    {{/each}}
+  </script>
+  <script>
+    $(function () {
+      FastClick.attach(document.body);
+    });
+    // $.showLoading("正在加载...");
+    $('#listwrap').on('scroll', (e) => {
+      // e.preventDefault() 
+      // e.stopPropagation() 
+      if ($('.hot-scenic').offset().top <= $(window).scrollTop()) {
+        $('aside').css('overflow-y', 'auto')
+        $('section').css('overflow-y', 'auto')
+      } else {
+        $('aside').css('overflow-y', 'hidden')
+        $('section').css('overflow-y', 'hidden')
+      }
+    })
+    let flag = true;
+    let mySwiper = new Swiper('.swiper-banner', {
+      loop: true,
+      autoplay: 3000,
+      // initialSlide: 0,
+      // observer:true,//修改swiper自己或子元素时，自动初始化swiper 
+      // observeParents:true, //修改swiper的父元素时，自动初始化swiper 
+      pagination: '.swiper-pagination',
+    });
+
+    $('aside').on('click', 'li', function () {
+      $(this).addClass('active').siblings().removeClass('active')
+      let id = $(this).data('id')
+      $.ajax({
+        url: `${baseUrl}/api/v1/scenicarea/read`,
+        data: {
+          per_page: 10,
+          page: 1,
+          id,
+        },
+        success(res) {
+          let {
+            error_code,
+            data: {
+              items: data
+            }
+          } = res
+          if (error_code === 0 && data.length) {
+            $('section').html(template('tourismListTmp', {
+              data
+            }))
+          }
+        }
+      })
+    })
+    //============================ 下拉刷新
+    $("#listwrap").pullToRefresh().on("pull-to-refresh", function () {
+      setTimeout(function () {
+        $("#listwrap").pullToRefreshDone(); // 重置下拉刷新
+      }, 1500); //模拟延迟
+    });
+
+    // 拉取banner
+    $.ajax({
+      url: `${baseUrl}/api/v1/banner/read`,
+      beforeSend() {
+        mySwiper.stopAutoplay();
+      },
+      success(res) {
+        let {
+          data
+        } = res
+        $('.swiper-wrapper').html(template('bannerTmp', {
+          data
+        }))
+        // mySwiper.update();
+        mySwiper.updatePagination()
+        mySwiper.reLoop();
+        mySwiper.startAutoplay();
+      },
+      error(err) {
+        $.toast("出错了", 'cancel');
+      }
+    })
+
+    // 拉取热门活动
+    $.ajax({
+      url: `${baseUrl}/api/v1/scenicact/readtop`,
+      success(res) {
+        let {
+          error_code,
+          data
+        } = res
+        if (error_code === 0 && data.length) {
+          $('.hote-cont').html(template('hotactTmp', {
+            data
+          }))
+        }
+        // if()
+      }
+    })
+    // 拉取左侧城市列表
+    $.ajax({
+      url: `${baseUrl}/api/v1/area/read`,
+      success(res) {
+        let {
+          error_code,
+          data
+        } = res
+        if (error_code === 0 && data.length) {
+          console.log('城市列表', data);
+          $('aside').html(template('asideTmp', {
+            data
+          }))
+        }
+      }
+    })
+    // 拉取城市-->景区列表
+    $.ajax({
+      url: `${baseUrl}/api/v1/scenicarea/read`,
+      data: {
+        per_page: 10,
+        page: 1,
+        id: 1,
+      },
+      success(res) {
+        let {
+          error_code,
+          data: {
+            items: data
+          }
+        } = res
+        if (error_code === 0 && data.length) {
+          console.log('单项数据为', data);
+          $.hideLoading();
+          $('section').html(template('tourismListTmp', {
+            data
+          }))
+        }
+      },
+      error(err) {
+        $.hideLoading();
+        $.toast("出错了", '接口异常，请重试');
+      }
+    })
+  </script>
+</body>
+
+</html>

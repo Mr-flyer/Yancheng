@@ -1,0 +1,143 @@
+* { word-wrap: break-word; word-break: break-all; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+
+html, body, div, span, p, a, img, ul, li, q { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { line-height: 1; background-color: #fff; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ''; content: none; }
+
+a, a:active, a:hover { text-decoration: none; -webkit-appearance: none; }
+
+img { vertical-align: middle; border: none; -webkit-touch-callout: none; }
+
+ul, ol, dl { list-style-type: none; list-style: none; }
+
+input, button { -webkit-appearance: none; outline: none; border: none; font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; }
+
+div, input, li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.full, html, body { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; }
+
+body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; position: relative; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; font-size: 16px; }
+
+html { font-size: 20vw; }
+
+@media screen and (max-width: 320px) { html { font-size: 64px; } }
+
+@media screen and (min-width: 540px) { html { font-size: 108px; } }
+
+body { min-width: 320px; max-width: 540px; margin: 0 auto; }
+
+.line-camp { text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.dv { width: 2rem; height: 2rem; background-color: aqua; border: 1px solid #000; }
+
+.weui-header { height: 2.06667rem; width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+.weui-content { background-color: #ffffff; }
+
+.food_bg { width: 5rem; height: 2.93333rem; position: absolute; top: 0; left: 0; }
+
+.food_bg > img { width: 100%; height: 100%; }
+
+.food_weather { margin-right: 0.07333rem; }
+
+.weui-content { background-color: #F4F4F4; }
+
+.food_title { display: flex; align-items: center; justify-content: space-between; }
+
+.wy-Module { padding: 0.19333rem 0.2rem 0.14667rem 0.2rem; border-bottom: 1px solid #f3f6f9; background-color: #FFFFFF; }
+
+.wy-Module2 { width: 100vw; padding: 0.19333rem 0.2rem 0.14667rem 0.2rem; border-bottom: 1px solid #f3f6f9; margin-top: 0.06667rem; background-color: #FFFFFF; margin-bottom: 0.06667rem; }
+
+.wy-Module-con { margin-top: 0.13333rem; }
+
+.food_first_title { font-size: 0.24rem; font-family: PingFang SC; font-weight: 500; color: #333333; line-height: 0.28rem; }
+
+.swiper-container { z-index: 0; }
+
+.food_second_title { font-size: 0.24rem; font-family: PingFang SC; font-weight: 500; }
+
+.swiper-slide > a > img { display: flex; flex-direction: column; justify-content: center; }
+
+.food_img { width: 100%; height: 100%; border-radius: 8px; }
+
+.food_img > img { width: 100%; height: 100%; }
+
+.food_name { font-size: 0.17333rem; font-family: PingFang SC; font-weight: 500; color: #333333; line-height: 1; margin-top: 0.13333rem; }
+
+.food_hotel { display: flex; flex-direction: column; height: 100%; }
+
+.hotel_lists { width: 4.6rem; display: flex; flex-wrap: wrap; }
+
+.hotel_list { display: flex; height: 2.28667rem; flex: 1; }
+
+.wy-pro-list li { margin-left: 0; }
+
+.food_hotel_pic { width: 2.24667rem; height: 1.68rem; border-radius: 8px; }
+
+.food_hotel_pic > img { width: 100%; height: 100%; }
+
+.food_hotel_info { display: flex; flex-direction: column; padding: 0.12667rem 0 0.19333rem 0; justify-content: space-between; }
+
+.food_hotel_name { font-size: 0.17333rem; font-family: PingFang SC; font-weight: 500; color: #333333; line-height: 1; }
+
+.food_hotel_priceAndLove { display: flex; align-items: center; margin-top: 0.12667rem; }
+
+.food_hotel_prices { font-size: 0.12rem; font-family: PingFang SC; font-weight: 400; color: #9ca6b0; }
+
+.food_hotel_price { font-size: 0.24rem; font-family: PingFang SC; font-weight: bold; color: #ff6653; line-height: 1; margin-right: 0.02667rem; margin-left: 0.08rem; }
+
+.wy-pro-list li { background: #ffffff; }
+
+.morelink { height: 0.45333rem; width: 4.54667rem; background: #f5fdfe; display: flex; align-items: center; justify-content: center; font-size: 0.16rem; font-family: PingFang SC; font-weight: 400; color: #999999; line-height: 1; margin-top: 0.08rem; }
+
+.swiper-pagination { margin-bottom: 0.35333rem; }
+
+.search_container { top: 0; left: 0; z-index: 1; border-radius: 0.22rem; width: 4.6rem; height: 0.44rem; box-sizing: border-box; box-shadow: -1px 10px 29px 0px rgba(38, 217, 201, 0.35); margin-left: 0.2rem; transform: translateY(-50%); }
+
+.search_container .search_box { padding: 0 0.2rem; height: 0.44rem; border-radius: 0.22rem; background-color: white; display: flex; justify-content: center; align-items: center; }
+
+.search_container .search_box > img { width: 0.16rem; }
+
+.search_container .search_box > input { width: 1.33333rem; align-self: stretch; background-color: transparent; padding-left: 0.13333rem; }
+
+.search_container .search_box input:focus { flex: 1; }
+
+.search_container .search_box input::-webkit-input-placeholder { color: rgba(153, 153, 153, 0.6); font-size: 14px; }
+
+.search_container .search_box input::-moz-input-placeholder { color: rgba(153, 153, 153, 0.6); font-size: 14px; }
+
+.search_container .search_box input::-ms-input-placeholder { color: rgba(153, 153, 153, 0.6); font-size: 14px; }
+
+.literature_titles { padding: 0.2rem 0.2rem 0.13333rem 0.2rem; display: flex; align-items: center; justify-content: space-between; background-color: #FFFFFF; }
+
+.literature_title { font-size: 0.24rem; font-family: PingFang SC; font-weight: 500; color: #333333; line-height: 0.28rem; }
+
+.literatures { padding: 0rem 0.2rem 0rem 0.2rem; display: flex; flex-direction: column; background-color: #ffffff; }
+
+.literature_template { display: flex; margin-bottom: 0.40667rem; }
+
+.literature_template_pic { width: 1.2rem; height: 1.73333rem; border-radius: 8px; flex-shrink: 0; }
+
+.food_second_title { width: 0.08rem; height: 0.14rem; }
+
+.food_second_title > img { width: 100%; height: 100%; }
+
+.literature_template_pic > img { width: 100%; height: 100%; }
+
+.literature_template_info { display: flex; flex-direction: column; margin-left: 0.17333rem; }
+
+.literature_template_info_title { font-size: 0.22667rem; font-family: PingFang SC; font-weight: 500; color: #373844; margin-bottom: 0.13333rem; }
+
+.literature_template_info_text { font-family: PingFang SC; font-weight: 400; color: #999999; line-height: 0.24rem; font-size: 0.17333rem; font-family: PingFang SC; font-weight: 400; color: #999999; text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 6; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.wy-pro-list li { margin-bottom: 0; }

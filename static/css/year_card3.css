@@ -1,0 +1,83 @@
+* { word-wrap: break-word; word-break: break-all; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+
+html, body, div, span, p, a, img, ul, li, q { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { line-height: 1; background-color: #fff; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ''; content: none; }
+
+a, a:active, a:hover { text-decoration: none; -webkit-appearance: none; }
+
+img { vertical-align: middle; border: none; -webkit-touch-callout: none; }
+
+ul, ol, dl { list-style-type: none; list-style: none; }
+
+input, button { -webkit-appearance: none; outline: none; border: none; font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; }
+
+div, input, li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.full, html, body { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; }
+
+body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; position: relative; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; font-size: 16px; }
+
+html { font-size: 20vw; }
+
+@media screen and (max-width: 320px) { html { font-size: 64px; } }
+
+@media screen and (min-width: 540px) { html { font-size: 108px; } }
+
+body { min-width: 320px; max-width: 540px; margin: 0 auto; }
+
+.line-camp { text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.dv { width: 2rem; height: 2rem; background-color: aqua; border: 1px solid #000; }
+
+.card_index { display: flex; flex-direction: column; align-items: center; background-color: #FFFFFF; width: 100vw; height: 100vh; }
+
+.card_show { width: 4.6rem; height: 2.93333rem; border-radius: 0.13333rem; display: flex; align-items: center; justify-content: center; }
+
+.card_show > img { border-radius: 0.13333rem; width: 100%; height: 100%; }
+
+.cards { width: 100%; background-color: #FFFFFF; display: flex; flex-direction: column; justify-content: center; padding: 0rem 0rem 0.2rem 0rem; align-items: center; justify-content: center; }
+
+.card_info { width: 4.6rem; display: flex; align-items: center; justify-content: space-between; height: 0.59333rem; border-bottom: 1px solid #f3f6f9; }
+
+.title { font-size: 0.2rem; font-family: PingFang SC; font-weight: 500; color: #323333; }
+
+.card_num { font-size: 0.18667rem; font-family: PingFang SC; font-weight: 500; color: #666666; }
+
+.data_info { width: 4.6rem; display: flex; align-items: center; align-items: center; justify-content: space-between; height: 0.59333rem; border-bottom: 1px solid #f3f6f9; }
+
+.data_time { font-size: 0.18667rem; font-family: PingFang SC; font-weight: 500; color: #666666; }
+
+.help { width: 4.6rem; display: flex; align-items: center; justify-content: space-between; height: 0.59333rem; border-bottom: 1px solid #f3f6f9; }
+
+.help_info { display: flex; }
+
+.use { font-size: 0.18667rem; font-family: PingFang SC; font-weight: 500; color: #666666; margin-right: 0.06667rem; }
+
+.to { width: 0.08rem; height: 0.14rem; display: flex; align-items: center; justify-content: center; }
+
+.to > img { width: 100%; height: 100%; }
+
+.two_code { width: 100%; height: auto; background-color: #FFFFFF; display: flex; flex-direction: column; align-items: center; padding-top: 0.34667rem; }
+
+.two { width: 1.4rem; height: 1.4rem; display: flex; align-items: center; justify-content: center; }
+
+.two > img { height: 100%; width: 100%; }
+
+.refresh { margin-top: 0.1rem; }
+
+.refresh > img { width: 0.13333rem; height: 0.15333rem; margin-right: 0.06667rem; }
+
+.now { font-size: 0.16rem; font-family: PingFang SC; font-weight: 400; color: #666666; }
+
+.message { margin-top: 0.13333rem; font-size: 0.18667rem; font-family: PingFang SC; font-weight: 400; color: #22c8d8; }

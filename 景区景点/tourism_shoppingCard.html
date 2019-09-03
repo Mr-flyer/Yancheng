@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>景点门票购买页 --- 立即购买</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/tourism_shoppingCard.css">
+</head>
+
+<body ontouchstart>
+    <!--主体-->
+    <div class='weui-content'>
+        <div class="radio_wrapper">
+            <div class="title">选择票档</div>
+            <div class="radio_group">
+                <div class="radio_item">
+                    <input id="radio1" type="radio" name="radio" checked>
+                    <label for="radio1">150元（成人票）</label>
+                </div>
+                <div class="radio_item">
+                    <input id="radio2" type="radio" name="radio">
+                    <label for="radio2">150元（成人票）</label>
+                </div>
+                <div class="radio_item">
+                    <input id="radio3" type="radio" name="radio">
+                    <label for="radio3">150元（成人票）</label>
+                </div>
+                <div class="radio_item">
+                    <input id="radio4" type="radio" name="radio">
+                    <label for="radio4">150元（成人票）</label>
+                </div>
+                <div class="radio_item">
+                    <input id="radio5" type="radio" name="radio">
+                    <label for="radio5">150元（成人票）150元（成人票）150元（成人票）150元（成人票）</label>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="time_wrapper">
+                <div class="date_item">
+                    <label for="date">使用时间</label>
+                    <div class="txt">
+                        <input id="date" type="date" placeholder="8月17日  9:00-14:00">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_pic">
+                    <img src="images/Mrflyer.jpg" />
+                </div>
+                <div class="card_cont">
+                    <div class="shop_name">中华麋鹿园</div>
+                    <div class="shop_desc">大丰区麋鹿保护区</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="num_item">
+                <label for="num">购买数量</label>
+                <div id="num" class="Spinner"></div>
+            </div>
+            <div class="submit_wrapper">
+                <div class="shop_price">
+                    共计<p>￥<b>300</b></p>
+                </div>
+                <a class="submit" href="../景区景点/tourism_order.html">立即购买</a>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/jquery.Spinner.js"></script>
+    <script>
+        $(function () {
+            // FastClick.attach(document.body);    
+            $(".Spinner").Spinner({
+                value: 1,
+                len: 3,
+                max: 999
+            });
+        });
+    </script>
+</body>
+
+</html>

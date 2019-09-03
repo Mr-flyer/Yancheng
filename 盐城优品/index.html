@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>盐城优品-首页</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sale.css">
+    <style>
+        .swiper-wrapper {
+            display: flex;
+            /* flex-wrap: nowrap; */
+        }
+    </style>
+</head>
+
+<body ontouchstart>
+    <!--顶部搜索-->
+    <header class='weui-header'>
+        <div class="food_bg">
+            <img src="./upload/ynt_sale_banner.png">
+        </div>
+
+
+        <div class="search_container">
+            <div class="search_box">
+                <img src="images/icon_search_gray.png" alt="">
+                <input class="search_input" type="search" placeholder="搜索您喜欢的">
+            </div>
+        </div>
+
+    </header>
+    <!--主体-->
+    <div class='weui-content'>
+        <!-- 筛选栏 -->
+        <div class="sale_options">
+            <div class="sale_option">
+                <a href="../盐城优品/ycyp_Allsales.html">
+                    <div>
+                        <img src="./images/ynt_sale_all.png">
+                    </div>
+                    <div class="sale_option_text">全部</div>
+                </a>
+            </div>
+            <div class="sale_option">
+                <a href="javascript:void(0);">
+                    <div>
+                        <img src="./images/ynt_sale_yanc.png">
+                    </div>
+                    <div class="sale_option_text">盐城特产</div>
+                </a>
+            </div>
+            <div class="sale_option">
+                <a href="javascript:void(0);">
+                    <div>
+                        <img src="./images/ynt_sale_feiyi.png">
+                    </div>
+                    <div class="sale_option_text">非遗产品</div>
+                </a>
+            </div>
+            <div class="sale_option">
+                <a href="javascript:void(0);">
+                    <div>
+                        <img src="./images/ynt_sale_jinmei.png">
+                    </div>
+                    <div class="sale_option_text">精美礼品</div>
+                </a>
+            </div>
+        </div>
+        <!-- 热销商品 -->
+        <div class="wy-Module">
+            <div class="food_title">
+                <div class="food_first_title">热销商品</div>
+                <div class="food_second_title">
+                    <img src="./images/More.png">
+                </div>
+            </div>
+            <div class="wy-Module-con">
+                <div class="swiper-container swiper-jingxuan">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="pro_info.html">
+                                <div class="commodity">
+                                    <img src="./upload/ynt_sale_test.png">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="pro_info.html">
+                                <div class="commodity">
+                                    <img src="./upload/ynt_sale_test.png">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="pro_info.html">
+                                <div class="commodity">
+                                    <img src="./upload/ynt_sale_test.png">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="pro_info.html">
+                                <div class="commodity">
+                                    <img src="./upload/ynt_sale_test.png">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--盐城特产-->
+        <div class="wy-Module">
+            <div class="YC_food_title">
+                <div class="food_first_title">盐城特产</div>
+                <div class="food_second_title">
+                    <img src="./images/More.png">
+                </div>
+            </div>
+            <!-- 瀑布流 -->
+            <div class="sale_things_show_lists">
+                <a href="../盐城优品/ycyp_commodity.html" class="sale_things_show_list_large">
+                    <div class="sale_thing_show_pic_large">
+                        <img src="./upload/ynt_sale_test.png">
+                    </div>
+                    <div class="sale_thing_show_title">老虎鞋盐城非遗</div>
+                    <div class="sale_thing">
+                        ￥<span class="sale_thing_price">39</span>元
+                    </div>
+                </a>
+                <a href="../盐城优品/ycyp_commodity.html" class="sale_things_show_list_large">
+                    <div class="sale_thing_show_pic_large">
+                        <img src="./upload/ynt_sale_test.png">
+                    </div>
+                    <div class="sale_thing_show_title">老虎鞋盐城非遗</div>
+                    <div class="sale_thing">
+                        ￥<span class="sale_thing_price">39</span>元
+                    </div>
+                </a>
+                <a href="../盐城优品/ycyp_commodity.html" class="sale_things_show_list_large">
+                    <div class="sale_thing_show_pic_large">
+                        <img src="./upload/ynt_sale_test.png">
+                    </div>
+                    <div class="sale_thing_show_title">老虎鞋盐城非遗</div>
+                    <div class="sale_thing">
+                        ￥<span class="sale_thing_price">39</span>元
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!--非遗产品-->
+        <div class="wy-Module">
+            <div class="YC_food_title">
+                <div class="food_first_title">非遗产品</div>
+                <div class="food_second_title">
+                    <img src="./images/More.png">
+                </div>
+            </div>
+            <!-- 瀑布流 -->
+            <div class="sale_things_show_lists">
+                <div class="sale_things_show_list_large">
+                    <div class="sale_thing_show_pic_large">
+                        <img src="./upload/ynt_sale_test.png">
+                    </div>
+                    <div class="sale_thing_show_title">老虎鞋盐城非遗1111111111111111111</div>
+                    <div class="sale_thing">
+                        ￥<span class="sale_thing_price">39</span>元
+                    </div>
+                </div>
+                <div class="sale_things_show_list_large">
+                    <div class="sale_thing_show_pic_large">
+                        <img src="./upload/ynt_sale_test.png">
+                    </div>
+                    <div class="sale_thing_show_title">老虎鞋盐城非遗强强强强强强强强强强</div>
+                    <div class="sale_thing">
+                        ￥<span class="sale_thing_price">39</span>元
+                    </div>
+                </div>
+                <div class="sale_things_show_list_large">
+                    <div class="sale_thing_show_pic_large">
+                        <img src="./upload/ynt_sale_test.png">
+                    </div>
+                    <div class="sale_thing_show_title">老虎鞋盐城非遗</div>
+                    <div class="sale_thing">
+                        ￥<span class="sale_thing_price">39</span>元
+                    </div>
+                </div>
+                <div class="sale_things_show_list_large">
+                    <div class="sale_thing_show_pic_large">
+                        <img src="./upload/ynt_sale_test.png">
+                    </div>
+                    <div class="sale_thing_show_title">老虎鞋盐城非遗</div>
+                    <div class="sale_thing">
+                        ￥<span class="sale_thing_price">39</span>元
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--底部导航-->
+    <div class="food_bottom_tabbar">
+        <a href="../盐城优品/index.html">
+            <div class="food_tabbar">
+                <div>
+                    <img src="./images/food_index.active.png" />
+                </div>
+                <p class="weui-tabbar_label index">首页</p>
+            </div>
+        </a>
+        <a href="../盐城优品/ycyp_Allsales.html">
+            <div class="food_tabbar">
+                <div>
+                    <img src="./images/ynt_sale_all__cus.png" />
+                </div>
+                <p class="weui-tabbar_label">全部商品</p>
+            </div>
+        </a>
+        <a href="../盐城优品/ycyp_gouwuche.html">
+            <div class="food_tabbar">
+                <div>
+                    <img src="./images/ynt_sale_shopcar_cus.png" />
+                </div>
+                <p class="weui-tabbar_label">购物车</p>
+            </div>
+
+        </a>
+        <a href="../盐城优品/userTourism.html">
+            <div class="food_tabbar">
+                <div>
+                    <img src="./images/food_my_custom.png" />
+                </div>
+                <p class="weui-tabbar_label">我的</p>
+            </div>
+        </a>
+    </div>
+
+    <script src="./lib/jquery-2.1.4.js"></script>
+    <script src="./lib/fastclick.js"></script>
+    <script>
+        $(function() {
+            FastClick.attach(document.body);
+        });
+    </script>
+    <script src="./js/jquery-weui.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script>
+        $(".swiper-banner").swiper({
+            loop: true,
+            autoplay: 3000
+        });
+        $(".swiper-news").swiper({
+            loop: true,
+            direction: 'vertical',
+            paginationHide: true,
+            autoplay: 30000
+        });
+        $(".swiper-jingxuan").swiper({
+            pagination: '.swiper-pagination',
+            loop: false,
+            paginationType: 'fraction',
+            slidesPerView: 2,
+            paginationClickable: true,
+            spaceBetween: 2
+        });
+        $(".swiper-jiushui").swiper({
+            pagination: '.swiper-pagination',
+            paginationType: 'fraction',
+            loop: true,
+            slidesPerView: 3,
+            slidesPerColumn: 2,
+            paginationClickable: true,
+            spaceBetween: 2
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+@import './_base';
+@import './_tool';
+
+.weui-content {
+    background-color: #F4F4F4;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.radio_wrapper {
+    background-color: #fff;
+    padding: rem(30);
+    margin-bottom: rem(10);
+    .title {
+        font-size: 18px;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+        line-height: 1;
+        margin-bottom: rem(20);
+    }
+    .radio_group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .radio_item {
+        overflow: hidden;
+        > input[type="radio"] {
+            display: none;
+            &:checked +label {
+                color: rgba(34,200,216, 1);
+                background:rgba(34,200,216, .3);
+            }
+        }
+        > label {
+            display: inline-block;
+            width:rem(335);
+            line-height: rem(90);
+            background:rgba(243,246,249,1);
+            border-radius: 4px;
+            padding: 0 rem(26);
+            box-sizing: border-box;
+            font-size: 14px;
+            color:rgba(102,102,102,1);
+            margin-bottom: rem(20);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+section {
+    flex: 1;
+    padding: 0 rem(30);
+    background-color: #fff;
+    .date_item {
+        height: rem(100);
+        display: flex;
+        justify-content: space-between;
+        > label {
+            font-size: 14px;
+            color:rgba(51,51,51,1);
+            display: flex;
+            align-items: center;
+        }
+    }
+    .txt {
+        flex: 1;
+        display: flex;
+        &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-top: 1px solid #999;
+            border-right: 1px solid #999;
+            transform: rotateZ(45deg) translateX(-50%);
+            align-self: center;
+        }
+        input[type="date"] {
+            flex: 1;
+            display: block;
+            line-height: rem(100);
+            text-align: right;
+            font-size: 14px;
+            color:rgba(34,200,216,1);
+            position: relative;
+            background-color: transparent;
+            // &::before {
+            //     content: attr(placeholder);
+            //     position: absolute;
+            //     right: 0;
+            // }
+        }
+    }
+}
+
+.card {
+    padding: rem(40) rem(24);
+    border-radius: 4px;
+    background-color: #F3F6F9;
+    display: flex;
+    .card_pic {
+        width: rem(120);
+        height: rem(120);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-right: rem(20);
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .shop_name {
+        font-size: 14px;
+        color:rgba(51,51,51,1);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-bottom: rem(20);
+    }
+    .shop_desc {
+        font-size:12px;
+        color:rgba(153,153,153,1);
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;left: 0;
+    width: 100%;
+    border-top: 1px solid #F4F4F4;
+    .num_item {
+        display: flex;
+        justify-content:space-between;
+        padding: 0 rem(30);
+        height: rem(100);
+        align-items: center;
+        background-color: #fff;
+    }
+    .submit_wrapper {
+        height: rem(100);
+        display: flex;
+        border-top: 1px solid #F3F6F9;
+        .shop_price {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            padding: 0 rem(30);
+            box-sizing: border-box;
+            min-width: rem(230);
+            max-width: 50%;
+            background-color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 12px;
+            color:rgba(102,102,102,1);
+            p {
+                color: #22C8D8;
+                b {
+                    font-size: 18px;
+                }
+            }
+        }
+        .submit {
+            flex: 1;
+            background-color: #22C8D8;
+            font-size: 17px;
+            color:rgba(255,255,255,1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+
+/*--订单详情---spinner--*/
+.Spinner{display:block;overflow:hidden;width:84px;margin:0; position: absolute; right: 0;display: flex;}
+.Spinner .Amount{width:26px;border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9;float:left;text-align:center;color:#333;outline:0; font-size:14px; display: flex;align-items: center;}
+.Spinner a{display:inline-block;width:22px;height:22px;border:1px solid #d9d9d9;background-color:#f7f7f7;float:left;cursor:pointer;outline:0;}
+.Spinner a i{font-style:normal;background:url(../images/BuynBtn.png) no-repeat;display:block;width:12px;height:12px;margin:5px;text-indent:999999%;overflow:hidden;}
+.Spinner .Decrease i{background-position:-12px -12px;}
+.Spinner .Increase i{background-position:-12px -0px;}
+.Spinner .DisDe i{background-position:-0px -12px;}
+.Spinner .DisIn i{background-position:-0px -0px;}

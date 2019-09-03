@@ -1,0 +1,242 @@
+@import './_base';
+@import './_tool';
+
+.weui-content {
+    padding-top: 0;
+    min-height: 100vh; 
+    padding-bottom: rem(126);
+    box-sizing: border-box; 
+    overflow: hidden;
+    background: linear-gradient(to bottom, #22C8D8, #fff 50%);
+}
+.top_tips {
+    height: rem(86);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    font-weight:400;
+    color:rgba(255,255,255, .8);
+}
+
+.ticket_list {
+    padding: 0 rem(30) 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    .tick_item {
+        position: relative;
+        border-radius: 4px;
+        display: flex;
+        height: rem(265);
+        padding: 0 rem(24);
+        margin-bottom: rem(20);
+        background: linear-gradient(to right, #fff, #fff 50%, transparent 50%, transparent 90%, #fff 90%, #fff);
+        // box-shadow:-8px 15px 29px 0px rgba(134, 176, 172, 0.35);
+        filter: drop-shadow(-3px 5px 10px rgba(134, 176, 172, 0.35));    // 盒子投影
+        &.end {
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+            filter: gray;
+            background: linear-gradient(to right, #DBDFDF, #DBDFDF 50%, transparent 50%, transparent 90%, #DBDFDF 90%, #DBDFDF);
+            > img {
+                width: rem(160);
+                position: absolute;
+                z-index: 9;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .tick_fl::before, .tick_fl::after {
+                box-shadow: -100px 0px 0 rem(280) #DBDFDF;
+            }
+            .tick_fr::before, .tick_fr::after {
+                box-shadow: 0px 0px 0 rem(200) #DBDFDF;
+            }
+            .tick_title, .tick_num, .tc_ft {
+                color: #fff;
+            }
+            .tick_fl .tick_box {
+                border-right: 1px dashed #B7B7B7;
+            }
+        }
+    }
+}
+.tick_fl, .tick_fr {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: rem(24) 0;
+}
+.tick_fl::before, .tick_fl::after,
+.tick_fr::before, .tick_fr::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: rem(20); height: rem(20);
+    border-radius: 50%;
+    background-color: transparent;
+}
+.tick_fl::before {
+    right: 0; top: 0;
+    transform: translate(50%, -50%);
+    box-shadow: -100px 0px 0 rem(280) #fff;
+}
+.tick_fl::after {
+    right: 0; bottom: 0;
+    transform: translate(50%, 50%);
+    box-shadow: -100px 0px 0 rem(280) #fff;
+}
+.tick_fr::before {
+    left: 0; top: 0;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 0 rem(200) #fff;
+}
+.tick_fr::after {
+    left: 0; bottom: 0;
+    transform: translate(-50%, 50%);
+    box-shadow: 0px 0px 0 rem(200) #fff;
+}
+
+.tick_fl {
+    flex: 1;
+    display: flex;
+    .tick_box {
+        padding-right: rem(15);
+        border-right: 1px dashed #E4E7EA;
+        position: relative;
+        z-index: 1; left: 0;
+        display: flex;
+    }
+    .tick_cont {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 12px;
+        font-weight:500;
+        color:rgba(153,153,153,1);
+        line-height: 21px;
+        .tick_title {
+            font-size: 17px;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            // line-height: 21px;
+            padding-bottom: rem(10);
+        }
+        .tick_num {
+            display: flex;
+            align-items: center;
+            > img {
+                width: rem(30);
+                padding-right: 3px;
+            }
+        }
+    }
+    .tick_pic {
+        flex-shrink: 0;
+        width: rem(110);
+        height: rem(146);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-left: rem(14 );
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.tick_fr {
+    flex-shrink: 0;
+    max-width: rem(160);
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    line-height: 1;
+    .tick_box {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-align: right;
+        padding-left: rem(15);
+        position: relative;
+        z-index: 1;
+    }
+    .time {
+        padding-top: rem(20);
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .tf_ft {
+        color: #999;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-right: rem(20);
+        &::after {
+            content: '';
+            position: absolute;
+            right: 1px;
+            width: 4px;
+            height: 4px;
+            border: 1px solid #999;
+            border-color: transparent #999 #999 transparent;
+            transform: rotateZ(-45deg);
+        }
+    }
+}
+
+.ticket_list .empty {
+    margin-top: rem(86);
+    border-radius: 4px;
+    overflow: hidden;
+    height: vh(600);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color:rgba(153,153,153,1);
+    line-height: 21px;
+    > img {
+        width: rem(250);
+    }
+}
+
+// 页脚按钮
+footer {
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: rem(98);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    > a {
+        flex: 1;
+        // background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        font-weight:400;
+        color:rgba(153,153,153,1);
+        &.active {
+            color: #22C8D8;
+        }
+    }
+    img {
+        width: rem(44);
+        padding-bottom: 4px;
+    }
+}

@@ -1,0 +1,237 @@
+@import './_base';
+@import './_tool';
+
+.weui-content {
+    background-color: #F4F4F4;
+    padding: 0;
+    .h1 {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(51, 51, 51, 1);
+        padding-bottom: rem(20);
+    }
+}
+
+header {
+    padding: rem(30);
+    background-color: #fff;
+    margin-bottom: rem(10);
+
+    .order_desc {
+        font-size: 13px;
+        color: rgba(102, 102, 102, 1);
+        line-height: 1.2em;
+    }
+
+    p {
+        display: flex;
+        padding-bottom: rem(14);
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+
+        >span:first-of-type {
+            flex-shrink: 0;
+        }
+
+        >span:last-of-type {
+            flex: 1;
+        }
+    }
+}
+
+.ipt_wrapper {
+    background-color: #fff;
+    margin-bottom: rem(10);
+
+    &:last-of-type {
+        margin-bottom: rem(120);
+    }
+
+    .ipt_title {
+        height: rem(88);
+        border-bottom: 1px solid#EAEEF0;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: rgba(51, 51, 51, 1);
+        display: flex;
+        align-items: center;
+        .tips {
+            font-size: 12px;
+            font-weight: 400;
+            padding-left: rem(20);
+            color:rgba(153,153,153,1);
+        }
+    }
+
+    .ipt_title,
+    .ipt_item {
+        padding: 0 rem(30);
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+}
+
+.ipt_group {
+    .ipt_item {
+        display: flex;
+        align-items: center;
+        height: rem(100);
+        border-bottom: 1px solid #EAEEF0;
+
+        &:last-of-type {
+            border: none;
+        }
+
+        >label[for] {
+            width: rem(140);
+            flex-direction: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        >input[type="text"] {
+            flex: 1;
+            align-self: stretch;
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #F4F4F4;
+
+    .submit_wrapper {
+        height: rem(100);
+        display: flex;
+
+        .shop_price {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            padding: 0 rem(30);
+            box-sizing: border-box;
+            min-width: rem(230);
+            max-width: 50%;
+            background-color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 12px;
+            color: rgba(102, 102, 102, 1);
+
+            p {
+                color: #22C8D8;
+
+                b {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .submit {
+            flex: 1;
+            background-color: #22C8D8;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+
+
+/*--订单详情---spinner--*/
+.Spinner {
+    display: block;
+    overflow: hidden;
+    width: 84px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+
+.Spinner .Amount {
+    width: 26px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    float: left;
+    text-align: center;
+    color: #333;
+    outline: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.Spinner a {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #d9d9d9;
+    background-color: #f7f7f7;
+    float: left;
+    cursor: pointer;
+    outline: 0;
+}
+
+.Spinner a i {
+    font-style: normal;
+    background: url(../images/BuynBtn.png) no-repeat;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    text-indent: 999999%;
+    overflow: hidden;
+}
+
+.Spinner .Decrease i {
+    background-position: -12px -12px;
+}
+
+.Spinner .Increase i {
+    background-position: -12px -0px;
+}
+
+.Spinner .DisDe i {
+    background-position: -0px -12px;
+}
+
+.Spinner .DisIn i {
+    background-position: -0px -0px;
+}
+
+// 重置 placeholder
+input::-webkit-input-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+    font-size: 14px;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #999;
+    font-size: 14px;
+}

@@ -1,0 +1,281 @@
+@import './_base';
+@import './_tool';
+
+
+.seacrch_wrapper {
+    padding: rem(30) rem(30) rem(10) rem(30);
+
+    .search {
+        height: rem(66);
+        border-radius: rem(33);
+        padding: 0 rem(30);
+        background-color: #F3F6F9;
+        display: flex;
+    }
+
+    .icon_search {
+        flex-shrink: 0;
+        align-self: center;
+        width: rem(24);
+        margin-right: rem(20);
+    }
+
+    input {
+        flex: 1;
+        background-color: transparent;
+    }
+}
+
+nav {
+    height: rem(100);
+    display: flex;
+
+    > div, a {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #F3F6F9;
+        box-sizing: border-box;
+        color: #333;
+    }
+}
+
+section {
+    padding: 0 rem(30);
+}
+
+.card {
+    padding: rem(30) 0;
+    border-bottom: 1px solid #F3F6F9;
+    display: flex;
+
+    .card_pic {
+        flex-shrink: 0;
+        width: rem(226);
+        height: rem(300);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-right: rem(24);
+
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card_cont {
+        overflow: hidden;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .vl_bd {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .vl_number {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-weight: bold;
+            color: rgba(102, 102, 102, 1);
+
+            img {
+                width: rem(34);
+                margin-right: 4px
+            }
+        }
+
+        .vl_price {
+            font-size: 12px;
+            color: rgba(102, 102, 102, 1);
+
+            span {
+                font-size: 22px;
+                font-weight: bold;
+                color: rgba(34, 200, 216, 1);
+            }
+        }
+    }
+
+    .vl_title {
+        padding-bottom: rem(20);
+        font-size: 17px;
+        font-weight: bold;
+        color: rgba(51, 51, 51, 1);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .vl_desc {
+        font-size: 13px;
+        color: rgba(153, 153, 153, 1);
+        line-height: 18px;
+    }
+
+    .tags_group {
+        span {
+            padding: 0 rem(16);
+            font-size: 12px;
+            line-height: rem(38);
+            border-radius: 2px;
+            color: rgba(49, 207, 148, 1);
+            background-color: rgba(49, 207, 148, .3);
+            &:nth-of-type(3n-1) {
+                color: rgba(49, 207, 148, 1);
+                background-color: rgba(49, 207, 148, .3);
+            }
+            &:nth-of-type(3n+2) {
+                color: rgba(34,200,216, 1);
+                background-color: rgba(34,200,216, .3);
+            }
+            &:nth-of-type(3n+3) {
+                color: rgba(250,173,20, 1);
+                background-color: rgba(250,173,20, .3);
+            }
+        }
+    }
+}
+.open-popup > .icon_screen {
+    width: rem(20);
+    margin-left: 4px;
+}
+// 弹窗
+.weui-popup__modal {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100vh;
+    .screen_header {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .close-popup, input[type="reset"] {
+        padding: rem(30);
+        // background-color: red;
+        // align-self: flex-end;
+    }
+    .close-popup .icon_next {
+        width: rem(48);
+    }
+    .popou_title {
+        font-size: 18px;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+    }
+}
+// 弹层内容区块
+.screen_cont {
+    flex: 1;
+    // overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 rem(30);
+    position: relative;
+    height: 100%;
+    // background-color: aqua;
+    .screen_item {
+        padding-bottom: rem(30);
+    }
+    .screen_title {
+        font-size: 18px;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        line-height: 1;
+        padding-bottom: rem(20);
+    }
+    .screen_group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        &.rangNum {
+            align-items: center;
+        }
+        &::after {
+            content: '';
+            width: 30%;
+            height: 0;
+        }
+    }
+    .screen_number {
+        height: rem(68);
+        width: 45%;
+        border: 1px solid #D5D8DC;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        input {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            padding-left: rem(10);
+            // box-sizing: border-box;
+            // background-color: red;
+        }
+    }
+    .screen_radio {
+        margin-bottom: rem(20);
+        width: 30%;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    // 自定义 input radio 样式
+    input[type="radio"] {
+        display: none;  // 隐藏原生控件
+        &:checked + label {
+            color: #22C8D8;
+            background:rgba(34,200,216, .2);
+        }
+    }
+    // 自定义 input radio 样式
+    input[type="checkbox"] {
+        display: none;  // 隐藏原生控件
+        &:checked + label {
+            // color: #22C8D8;
+            // background:rgba(34,200,216, .2);
+            color: rgba(34, 200, 216, 1);
+            border: 1px solid rgba(34, 200, 216, 1);
+        }
+    }
+    label {
+        // display: flex;
+        display: block;
+        // justify-content: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background:rgba(243,246,249,1);
+        border: 1px solid rgba(243,246,249,1);
+        border-radius: 4px;
+        padding: rem(18) rem(24);
+        align-items: center;
+        font-size: 14px;
+        // line-height: 1.2em;
+        font-weight:500;
+        color:rgba(102,102,102,1);
+        box-sizing: border-box;
+    }
+
+    .undetermined {
+        height: rem(170);
+    }
+}
+
+// 弹层页脚提交按钮
+.screen_btn {
+    flex-shrink: 0;
+    padding: rem(20);
+    background-color: #fff;
+}

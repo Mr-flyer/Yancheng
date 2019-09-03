@@ -1,0 +1,58 @@
+$vm_width: 750; // 默认采用二倍屏 --- 750
+$vm_height: 1334;
+$vm_fontsize: 75; // 默认为当前屏的 1/10 --- 75
+@function rem($px) {
+  @return ($px / $vm_fontsize / 2 ) * 1rem;
+}
+html {
+  font-size: ($vm_fontsize / ($vm_width / 2) ) * 100vw; 
+  @media screen and (max-width: 320px) {
+    font-size: 64px;
+  }
+  @media screen and (min-width: 540px) {
+    font-size: 108px;
+  }
+}
+// body 也增加最大最小宽度限制，避免默认100%宽度的 block 元素跟随 body 而过大过小
+body {
+  min-width: 320px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+@function vh($px) {
+  @return ($px / $vm_height) * 100vh;
+}
+
+// 文字溢出隐藏
+@mixin line-camp($clamp: 2) {
+  .line-camp {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis; // 溢出文本省略号显示
+    display: -webkit-box;
+    -webkit-line-clamp: $clamp; // 限制块级元素文本行数
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical; // 重置文本排列方式
+    /* autoprefixer: on */
+  }
+}
+@include line-camp();
+
+// 重置 btn 样式
+.weui-btn {
+  width: 100%;
+  &.long {
+      border-radius: 0;
+      border: none;
+      &::after {
+          display: none;
+      }
+  }
+  &.blue {
+      background:rgba(34,200,216,1);
+  }
+  &.weui-btn_disabled.blue {
+      background:rgba(34,200,216,.3);
+  }
+}

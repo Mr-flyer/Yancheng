@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>场馆详情</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/venue_order.css">
+</head>
+
+<body ontouchstart>
+    <div class='weui-content'>
+
+        <div class="details">
+            <div class="item">
+                <div class="item_lump">
+                    <label for="name">姓名</label>
+                    <input id="name" class="name" type="text">
+                    <div class="bottom-line"></div>
+                </div>
+                <div class="item_lump">
+                    <label for="tel">电话</label>
+                    <input id="tel" type="text">
+                    <div class="bottom-line"></div>
+                </div>
+            </div>
+            <div class="item">
+                <label for="IDcard">身份证号</label>
+                <input id="IDcard" type="text">
+                <div class="bottom-line"></div>
+            </div>
+            <div class="item">
+                <label for="datetime">预订时间</label>
+                <input id="datetime" type="date" placeholder="8月17日  9:00-14:00">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_pic">
+                <img src="images/Mrflyer.jpg" alt="">
+            </div>
+            <div class="card_cont">
+                <div class="card_title">青葵剧场</div>
+                <div class="card_desc">江苏文化大厦四楼,面积300平方米，座位</div>
+            </div>
+        </div>
+        <!-- 立即预约 -->
+        <div class="footer">
+            <div class="ve_allprice">共计
+                <span><sub>&yen;</sub>7500</span>
+            </div>
+            <a class="submit" href="../文化生活/venue_order_result.html">确认支付</a>
+        </div>
+    </div>
+
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script src="lib/fastclick.js"></script>
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+    <script src="js/jquery-weui.js"></script>
+    <script>
+        // 日期选择器 ----  placeholder
+        let o = document.getElementById('IDcard');
+        o.onfocus = function () {
+            this.removeAttribute('placeholder');
+        };
+        o.onblur = function () {
+            if (this.value == '') this.setAttribute('placeholder', '8月17日  9:00-14:00');
+        };
+        $("input").focus(function (event) {
+            $(this).parents('.item_lump').addClass('active')
+            $(this).next(".bottom-line").stop().animate({
+                "width": "100%"
+            }, 300);
+        });
+        //输入框失去焦点时
+        $("input").blur(function (event) {
+            if (!$("input").val()) {
+                $(this).parents('.item_lump').removeClass('active')
+            }
+            //用div模拟的下边框缩回，其width动态恢复为默认宽度0
+            $(this).next(".bottom-line").stop().animate({
+                "width": "0"
+            }, 300);
+        });
+    </script>
+</body>
+
+</html>

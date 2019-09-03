@@ -1,0 +1,243 @@
+@import './_base';
+@import './_tool';
+
+.weui-content {
+    background-color: #F4F4F4;
+    min-height: 100vh;
+}
+
+header {
+    padding: rem(56) rem(30) 0;
+    background: linear-gradient(to bottom, #22C8D8, #fff 50%);
+}
+
+.order_status {
+    .od_title {
+        font-size: 22px;
+        font-weight:bold;
+        color:rgba(255,255,255,1);
+        line-height: 1;
+        padding-bottom: rem(20);
+    }
+    .od_action {
+        display: flex;
+        align-items: center;
+    }
+    .od_btn {
+        padding: 0 rem(26);
+        background-color: #fff;
+        font-size: 12px;
+        font-weight:bold;
+        color:rgba(64,207,221,1);
+        line-height: rem(50);
+        border-radius: rem(25);
+        margin-right: rem(18);
+    }
+    p {
+        font-size:12px;
+        font-weight:500;
+        color:rgba(255,255,255, .8);
+    }
+}
+
+.card_float {
+    margin-top: rem(40);
+    padding: rem(30) rem(24);
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow:-3px 5px 9px 0px rgba(134, 176, 172, 0.35);
+    .card_hd {
+        font-size: 14px;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        display: flex;
+        align-items: center;
+        padding-bottom: rem(20);
+        .tag {
+            padding: rem(6) rem(16);
+            border-radius: 2px;
+            border: 1px solid #22C8D8;
+            font-size: 1px;
+            color:rgba(34,200,216,1);
+            line-height: 1;
+            margin-right: rem(10);
+        }
+    }
+    .card_bd {
+        padding: rem(10) rem(16);
+        border-radius: 4px;
+        background-color: #F3F6F9;
+        font-size: 12px;
+        color:rgba(51,51,51,1);
+        line-height: 1.2em;
+        display: flex;
+        > span {
+            flex-shrink: 0;
+            font-size: 12px;
+            color:rgba(153,153,153,1);
+            padding-right: rem(17);
+        }
+        > p {
+            flex: 1;
+            position: relative;
+            &::after {
+                position: absolute;
+                width: 6px; height: 6px;
+                border-top: 1px solid #D7D7D7;
+                border-right: 1px solid #D7D7D7;
+                transform: rotateZ(45deg)
+            }
+        }
+    }
+}
+
+.card {
+    margin-bottom: rem(10);
+    padding-top: rem(30);
+    // padding: rem(30) rem(30) 0 rem(30);
+    // background-color: #fff;
+    .card_hd {
+        padding-bottom: rem(30);
+        border-bottom: 1px solid #F3F6F9;
+        display: flex;
+    }
+    .card_bd {
+        height: rem(82);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        font-weight:500;
+        color:rgba(153,153,153,1);
+    }
+    .card_pic {
+        flex-shrink: 0;
+        width: rem(160);
+        height: rem(212);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-right: rem(20);
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .card_cont {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .order_title {
+            font-size: 17px;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis; // 溢出文本省略号显示
+            display: -webkit-box;
+            -webkit-line-clamp: 2; // 限制块级元素文本行数
+            /*! autoprefixer: off */
+            -webkit-box-orient: vertical; // 重置文本排列方式
+            /* autoprefixer: on */
+        }
+        .order_desc > p {
+            display: flex;
+            align-items: flex-start;
+            font-size: 13px;
+            font-weight:400;
+            color:rgba(153,153,153,1);
+            line-height: 18px;
+            padding-bottom: 2px;
+            .icon { 
+                flex-shrink: 0;
+                display: inline-flex; 
+                align-items: center; 
+                padding-right: 5px;
+            }
+            .txt {
+                flex: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            img {
+                width: rem(24);
+            }
+        }
+    }
+    .btn_group {
+        font-size: 14px;
+        color:rgba(51,51,51,1);
+        span {
+            display: inline-block;
+            line-height: rem(60);
+            border-radius: rem(30);
+            padding: 0 rem(30);
+            border: 1px solid #BDBDBD;
+            color: #999;
+            box-sizing: border-box;
+            &.red {
+                background:linear-gradient(-35deg,rgba(34,200,216,1),rgba(34,216,210,1));
+                border: none;
+                font-size: 13px;
+                font-weight:500;
+                color: #fff;
+            }
+            &.blue {
+                background:linear-gradient(-35deg,rgba(255,103,102,1),rgba(255,149,102,1));
+                border: none;
+                font-size: 13px;
+                font-weight:500;
+                color: #fff;
+            }
+        }
+    }
+}
+
+section {
+    background-color: #fff;
+    margin: rem(10) 0;
+    .title {
+        line-height: rem(84);
+        border-bottom: 1px solid #F3F6F9;
+        font-size: 18px;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        padding: 0 rem(30);
+    }
+    .cell_item {
+        height: rem(100);
+        border-bottom: 1px solid #F3F6F9;
+        padding: 0 rem(30);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:first-of-type {
+            > p {
+                color: #333;
+            }
+        }
+        > span {
+            flex-shrink: 0;
+            font-size: 14px;
+            color:rgba(51,51,51,1);
+        }
+        > p {
+            flex: 1;
+            text-align: right;
+            font-size: 14px;
+            color:rgba(153,153,153,1);
+        }
+    }
+}
+
+
+.weui-btn.weui-btn_default {
+    line-height: rem(100);
+    font-size: 14px;
+    color:rgba(34,200,216,1);
+    background-color: #fff;
+}

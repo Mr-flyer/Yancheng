@@ -1,0 +1,87 @@
+* { word-wrap: break-word; word-break: break-all; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+
+html, body, div, span, p, a, img, ul, li, q { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { line-height: 1; background-color: #fff; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ''; content: none; }
+
+a, a:active, a:hover { text-decoration: none; -webkit-appearance: none; }
+
+img { vertical-align: middle; border: none; -webkit-touch-callout: none; }
+
+ul, ol, dl { list-style-type: none; list-style: none; }
+
+input, button { -webkit-appearance: none; outline: none; border: none; font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; }
+
+div, input, li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.full, html, body { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; }
+
+body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; position: relative; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; font-size: 16px; }
+
+html { font-size: 20vw; }
+
+@media screen and (max-width: 320px) { html { font-size: 64px; } }
+
+@media screen and (min-width: 540px) { html { font-size: 108px; } }
+
+body { min-width: 320px; max-width: 540px; margin: 0 auto; }
+
+.line-camp { text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.dv { width: 2rem; height: 2rem; background-color: aqua; border: 1px solid #000; }
+
+.weui-content { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.tourst_head { height: 2.61333rem; width: 100%; }
+
+.tourst_head > img { width: 100%; height: 100%; }
+
+.tourst_info { background-color: white; display: flex; flex-direction: column; align-items: center; transform: translateY(-8vw); width: 4.6rem; height: 1.37333rem; box-shadow: -2px 4px 5px 0px rgba(34, 200, 216, 0.15); border-radius: 8px; }
+
+.family_info_head { width: 4.6rem; background: white; box-shadow: 2px 2px 3px 0px rgba(34, 200, 216, 0.15); border-radius: 8px; display: flex; flex-direction: column; align-items: center; padding: 0.2rem 0.16667rem 0.20667rem 0.17333rem; z-index: 1001; background-color: #FFFFFF; }
+
+.family_info_head_titles { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 0.20667rem; }
+
+.family_info_head_title { height: 0.28rem; font-size: 0.29333rem; font-family: PingFang SC; font-weight: bold; color: #333333; line-height: 1; align-self: flex-start; }
+
+.family_informations { width: 100%; display: flex; flex-wrap: wrap; }
+
+.family_informations > div { display: flex; align-items: center; width: 50%; margin-bottom: 0.15333rem; }
+
+.familyTrip_info { display: flex; align-items: center; justify-content: center; font-size: 0.16rem; font-family: PingFang SC; font-weight: 400; color: #5a6169; line-height: 1; }
+
+.Attractions { display: flex; align-items: center; }
+
+.Attractions > div:first-of-type { width: 0.18667rem; height: 100%; margin-right: 0.07333rem; display: flex; align-items: center; justify-content: center; }
+
+.Attractions > div:first-of-type > img { width: 100%; height: 100%; }
+
+.Activities { display: flex; align-items: center; }
+
+.Activities > div:first-of-type { width: 0.18667rem; height: 100%; margin-right: 0.07333rem; display: flex; align-items: center; justify-content: center; }
+
+.Activities > div:first-of-type > img { width: 100%; height: 100%; }
+
+.super_dinner { display: flex; align-items: center; }
+
+.super_dinner > div:first-of-type { width: 0.18667rem; height: 100%; margin-right: 0.07333rem; display: flex; align-items: center; justify-content: center; }
+
+.super_dinner > div:first-of-type > img { width: 100%; height: 100%; }
+
+.dinner_nums { display: flex; align-items: center; }
+
+.dinner_nums > div:first-of-type { width: 0.19333rem; height: 100%; margin-right: 0.07333rem; display: flex; align-items: center; justify-content: center; }
+
+.dinner_nums > div:first-of-type > img { width: 100%; height: 100%; }
+
+.culture_text { width: 100%; overflow-x: auto; }

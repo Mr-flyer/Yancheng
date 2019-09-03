@@ -1,0 +1,342 @@
+@import './_base';
+@import './_tool';
+
+body {
+    height: auto;
+}
+.wrapper {
+    background-color: #fff;
+    padding-bottom: rem(20);
+}
+.weui-content {
+    background-color: #F4F4F4;
+}
+.swiper-banner {
+    height: rem(392);
+    position: relative;
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+        > img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .page_number {
+        position: absolute;
+        bottom: rem(52); right: rem(30);
+        z-index: 9;
+        background:rgba(255,255,255,.8);
+        border-radius:6px;
+        font-size: 12px;
+        line-height: 1.2em;
+        color: #333;
+        padding: 0 rem(16);
+        transform: scale(.913);
+    }
+}
+
+.tour-card {
+    width: rem(690);
+    margin: rem(-30) auto 0;
+    padding: rem(26) rem(26) 0 rem(26); 
+    background: #fff url('../images/tourinfo_cardbg.png') no-repeat bottom right;
+    background-size: rem(180);
+    box-shadow:-1px 4px 6px 0px rgba(34,200,216,0.15);
+    border-radius: 4px;
+    position: relative;
+    z-index: 9;
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        .tour-title {
+            font-size: 22px;
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+        }
+        .tour-voice {
+            flex-shrink: 0;
+            width: rem(175);
+            align-self: flex-start; 
+            line-height: rem(48);
+            text-align: center;
+            background:linear-gradient(-32deg,rgba(34,200,216,1),rgba(34,216,210,1));
+            border-radius: 2px;
+            color: #fff;
+            font-size: 13px;
+            > img {
+                width: rem(22);
+            }
+        }
+    }  
+    .card-body {
+        padding: rem(40) 0 rem(24);
+        border-bottom: 1px solid #F3F6F9;
+    }
+    .card-footer {
+        height: rem(90);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size:14px;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        > img {
+            width: rem(27);
+        }
+    }
+    .tour-desc {
+        > p:first-of-type {
+            font-size:14px;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            line-height:21px;
+        }
+        > p:last-of-type {
+            font-size:12px;
+            font-weight:400;
+            color:rgba(153,153,153,1);
+            line-height: 1.2em;
+        }
+    }
+}
+
+.tabbar-box {
+    background-color: #fff;
+}
+.tabbar-hd {
+    line-height: rem(78);
+    border-bottom: 1px solid #F3F6F9;
+    display: flex;
+    justify-content: space-around;
+    .tabbar-btn {
+        width: rem(98);
+        font-size: 14px;
+        font-weight:500;
+        color:rgba(55,56,68,1);
+        text-align: center;
+        box-sizing: border-box;
+        &.active {
+            font-weight:bold;
+            color:rgba(34,200,216,1);
+            border-bottom: 2px solid #22C8D8;
+        }
+    }
+}
+
+.tabbar-bd {
+    padding: rem(30) rem(30) 0 rem(30);
+    .tab-title {
+        font-size: 18px;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+        // line-height:42px;
+    }
+    .ticket-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(28) 0;
+        border-bottom: 1px solid #F3F6F9;
+        .ticket-title {
+            font-size: 14px;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            line-height: 21px;
+            padding-bottom: rem(10);
+        }
+        .ticket-tips {
+            font-size:12px;
+            font-weight:400;
+            color:rgba(34,200,216,1);
+        }
+        .ticket-cell {
+            font-size: 12px;
+            font-weight:400;
+            color:rgba(153,153,153,1);
+            line-height: 21px;
+            transform: translate(.916);
+            
+        }
+        .ticket-btn {
+            position: relative;
+            display: block;
+            > span {
+                display: inline-block;
+                width:rem(142);
+                line-height:rem(48);
+                text-align: center;
+                background:linear-gradient(-31deg,rgba(255,103,102,1),rgba(255,149,102,1));
+                border-radius:3px;
+                font-size: 13px;
+                font-weight:bold;
+                color:rgba(249,249,248,1);
+                margin-top: rem(10);
+            }
+            &.present::after {
+                content: '到场支付';
+                position: absolute;
+                width: 100%;
+                top: 100%; left: 0;
+                transform: translateY(-10%);
+                border-radius: 0 0 3px 3px;
+                font-size: 11px;
+                font-weight: normal;
+                line-height: 16px;
+                text-align: center;
+                color: #F35C49;
+                border:1px solid rgba(255,102,102,1);
+                box-sizing: border-box;
+            }
+        }
+    }
+    .ticket-cont {
+        flex: 1;
+        margin-right: rem(40);
+    }
+    .ticket-action {
+        flex-shrink: 0;
+        color: #FF6653;
+        line-height: 1;
+        text-align: right;
+        font-weight: bold;
+        font-size: 12px;
+        > span {
+            font-size: 18px;
+            padding-left: 4px;
+        }
+    }
+}
+
+.correlation-card {
+    padding: rem(30);
+    margin: rem(10) 0;
+    background-color: #fff;
+    .card-header {
+        font-size:18px;
+        font-family:PingFang SC;
+        font-weight:bold;
+        border-bottom: 1px solid #F3F6F9;
+        padding-bottom: rem(20);
+    }
+    .card-body {
+        padding-top: rem(20);
+        display: flex;
+        justify-content: space-between;
+    }
+    .crl-cont {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: rem(20);
+        .crl-title {
+            font-size: 17px;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            line-height:21px;
+            > span {
+                display: inline-block;
+                padding: rem(8);
+                margin-left: rem(10);
+                line-height: 1;
+                background:linear-gradient(-31deg,rgba(255,103,102,1),rgba(255,149,102,1));
+                border-radius:2px;
+                font-size:12px;
+                transform: scale(.916);
+                font-weight:500;
+                color:rgba(255,255,255,1);
+            }
+        }
+        .crl-footer {
+            font-size: 12px;
+            font-weight:400;
+            color:rgba(153,153,153,1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .crl-number {
+            display: flex;
+            align-items: center;
+            img {
+                width: rem(20);
+                margin-right: 3px;
+            }
+        }
+    }
+    .crl-pic {
+        flex-shrink: 0;
+        width: rem(226);
+        height: rem(158);
+        border-radius: 4px;
+        overflow: hidden;
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.tourism_desc {
+    padding: rem(30);
+    margin: rem(10) 0;
+    background-color: #fff;
+    .title {
+        font-size: 18px;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+        padding-bottom: rem(14);
+    }
+    .desc {
+        font-size: 14px;
+        color:rgba(102,102,102,1);
+        line-height: 20px;
+    }
+}
+
+// 大家都喜欢
+.hot_act {
+    padding: 0 rem(30) rem(30);
+    background-color: #fff;
+    .hot_title {
+        font-size: 18px;
+        line-height: 1;
+        padding: rem(20) 0;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+    }
+    .hot_bd {
+        // padding: 0 rem(30);
+        overflow-x: auto;
+        display: flex;
+        box-sizing: border-box;
+        .act_item {
+            width: rem(334);
+            flex-shrink: 0;
+            margin-right: rem(20);
+        }
+        .act_pic {
+            height: rem(200);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: rem(20);
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover
+            }
+        }   
+        .act_title {
+            font-size: 15px;
+            color: #373844;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

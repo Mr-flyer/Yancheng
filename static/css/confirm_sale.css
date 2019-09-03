@@ -1,0 +1,127 @@
+* { word-wrap: break-word; word-break: break-all; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+
+html, body, div, span, p, a, img, ul, li, q { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { line-height: 1; background-color: #fff; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, i th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ''; content: none; }
+
+a, a:active, a:hover { text-decoration: none; -webkit-appearance: none; }
+
+img { vertical-align: middle; border: none; -webkit-touch-callout: none; }
+
+ul, ol, dl { list-style-type: none; list-style: none; }
+
+input, button { -webkit-appearance: none; outline: none; border: none; font-family: 'PingFang SC', 'Microsoft YaHei', 'SimSun', 'Arial', sans-serif; }
+
+div, input, li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.full, html, body { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: auto; }
+
+body { font-family: 'PingFang SC', 'Microsoft YaHei', 'SimSun', 'Arial', sans-serif; position: relative; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; font-size: 16px; }
+
+.container { height: 100vh; width: 100vw; overflow: hidden; }
+
+.container > .err { width: 100%; height: 100%; object-fit: cover; }
+
+.weui-content { position: relative; padding-top: 50px; height: 100vh; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; box-sizing: content-box; }
+
+.weui-pull-to-refresh__layer { position: absolute; top: 0; left: 0; width: 100%; }
+
+html { font-size: 20vw; }
+
+@media screen and (max-width: 320px) { html { font-size: 64px; } }
+
+@media screen and (min-width: 540px) { html { font-size: 108px; } }
+
+body { min-width: 320px; max-width: 540px; margin: 0 auto; }
+
+.line-camp { text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.weui-btn { width: 100%; }
+
+.weui-btn.long { border-radius: 0; border: none; }
+
+.weui-btn.long::after { display: none; }
+
+.weui-btn.blue { background: #22c8d8; }
+
+.weui-btn.weui-btn_disabled.blue { background: rgba(34, 200, 216, 0.3); }
+
+.dv { width: 2rem; height: 2rem; background-color: aqua; border: 1px solid #000; }
+
+body { background-color: #F4F4F5; }
+
+.infromation_container { display: flex; flex-direction: column; align-items: center; background-color: #F4F4F5; }
+
+.address { width: 4.6rem; height: 1.16rem; background: white; border-radius: 8px; display: flex; align-items: center; margin-top: 0.06667rem; }
+
+.address_pic { width: 0.58667rem; height: 0.58667rem; border-radius: 50%; margin-left: 0.16667rem; }
+
+.address_pic > img { width: 100%; height: 100%; border-radius: 50%; }
+
+.address_infos { display: flex; flex-direction: column; max-width: 2.99333rem; text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ margin-left: 0.16rem; }
+
+.addesrs_comsume { display: flex; }
+
+.name { font-size: 15px; font-family: PingFang SC; font-weight: 500; color: #323333; margin-right: 0.09333rem; }
+
+.phone { font-size: 12px; font-family: PingFang SC; font-weight: 500; color: #999999; }
+
+.address_info { font-size: 13px; font-family: PingFang SC; font-weight: 500; color: #333333; margin-top: 0.12rem; line-height: 1.2; }
+
+.to { width: 0.08rem; height: 0.14rem; display: flex; align-items: center; justify-content: center; margin-left: 0.44667rem; }
+
+.to > img { width: 100%; height: 100%; }
+
+.all_things { width: 4.6rem; background: white; border-radius: 8px; margin-top: 0.06667rem; }
+
+.thing_template { width: 4.6rem; height: 1.52rem; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #f3f6f9; }
+
+.sale_img { width: 1.50667rem; height: 1.12rem; border-radius: 8px; flex-shrink: 0; }
+
+.sale_img > img { width: 100%; height: 100%; }
+
+.sale_info { display: flex; flex-direction: column; max-width: 2.56667rem; text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-left: 0.16rem; }
+
+.title { font-size: 15px; font-family: PingFang SC; font-weight: 500; color: #323333; line-height: 1.2; }
+
+.reason { width: 1.36rem; height: 0.26667rem; background: #f8f8f8; border-radius: 2px; font-size: 12px; font-family: PingFang SC; font-weight: 500; color: #faad14; margin-top: 0.1rem; display: flex; align-items: center; justify-content: center; }
+
+.price { font-size: 15px; font-family: PingFang SC; font-weight: 500; color: #333333; margin-top: 0.1rem; margin-left: 1.8rem; }
+
+.beizhu_info { width: 4.6rem; padding-bottom: 1.33333rem; }
+
+.fangshi { display: flex; height: 0.56rem; background-color: #ffffff; display: flex; align-items: center; }
+
+.fs { font-size: 13px; font-family: PingFang SC; font-weight: 500; color: #323333; margin-left: 0.16rem; line-height: 1.2; }
+
+.bz { font-size: 13px; font-family: PingFang SC; font-weight: 500; color: #323333; margin-left: 0.16rem; line-height: 1.2; }
+
+.info_input { height: 0.26667rem; max-width: 3.33333rem; display: flex; align-items: center; justify-content: center; }
+
+.hotel_input_search { padding: 0rem 0rem 0rem 0.22rem; }
+
+.beizhu { display: flex; height: 0.56rem; background-color: #ffffff; display: flex; align-items: center; }
+
+.money { position: fixed; bottom: 0; width: 100%; height: 0.8rem; background: white; display: flex; align-items: center; }
+
+.total { font-size: 12px; font-family: PingFang SC; font-weight: 500; color: #666666; margin-left: 1.48667rem; display: flex; align-items: center; justify-content: center; }
+
+.all_money { font-size: 16px; font-family: PingFang SC; font-weight: 500; color: #323333; margin-left: 0.13333rem; line-height: 1.2; display: flex; align-items: center; }
+
+.doler { font-size: 12px; color: #34bac9; }
+
+.total_price { color: #34bac9; }
+
+.submit { width: 1.13333rem; height: 0.4rem; border-radius: 6px; background-color: #34BCCB; font-size: 16px; font-family: PingFang SC; font-weight: 500; color: #fafaf9; line-height: 1.2; display: flex; align-items: center; justify-content: center; margin-left: 0.28rem; }
+
+.weui-pull-to-refresh { margin-top: 0; transform: translateY(-10.5vw); }

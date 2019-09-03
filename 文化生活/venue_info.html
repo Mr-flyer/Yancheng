@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>场馆详情</title>
+  <base href="../static/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="lib/weui.min.css">
+  <link rel="stylesheet" href="css/jquery-weui.css">
+  <link rel="stylesheet" href="css/venue_info.css">
+</head>
+
+<body ontouchstart>
+  <!--主体-->
+  <div class='weui-content'>
+    <!--顶部轮播-->
+    <div class="swiper-container swiper-banner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><a><img src="upload/ban1.jpg" /></a></div>
+        <div class="swiper-slide"><a><img src="upload/ban2.jpg" /></a></div>
+        <div class="swiper-slide"><a><img src="upload/ban3.jpg" /></a></div>
+        <div class="swiper-slide"><a><img src="upload/ban4.jpg" /></a></div>
+      </div>
+      <!-- <div class="page_number"> 1/5 </div> -->
+      <!-- 轮播指示点 -->
+      <div class="swiper-pagination page_number"></div>
+    </div>
+    <!-- 主题内容区域 -->
+    <div class="main">
+      <!-- 悬层卡片 -->
+      <div class="card_float">
+        <div class="ve_title">
+          <div class="ve_txt">青葵剧场</div>
+          <!-- <div class="ve_price"><span>150</span>元/小时</div> -->
+        </div>
+        <div class="ve_time">周一至周六 08:30-24:00</div>
+        <div class="ve_tel">咨询电话：025-84699252
+          <img src="images/icon_clock.png" alt="">
+        </div>
+        <div class="ve_location">盐城 中山南路89号江苏省文化大厦4层
+          <img src="images/icon_location.png" alt="">
+        </div>
+      </div>
+      <!-- 标签区块、 -->
+      <div class="tag_container">
+        <div class="tag_bar">
+          <span class="tag">可预订</span>
+          <span class="tag">音乐厅</span>
+          <span class="tag">设备齐全</span>
+          <span class="tag">可预订</span>
+          <span class="tag">音乐厅</span>
+          <span class="tag">设备齐全</span>
+        </div>
+        <div class="tag_list">
+          <div class="tag_item">
+            <img src="images/icon_venue01.png" alt="">
+            135个座位
+          </div>
+          <div class="tag_item">
+            <img src="images/icon_venue02.png" alt="">
+            135个座位
+          </div>
+          <div class="tag_item">
+            <img src="images/icon_venue03.png" alt="">
+            135个座位
+          </div>
+          <div class="tag_item">
+            <img src="images/icon_venue04.png" alt="">
+            135个座位
+          </div>
+          <div class="tag_item">
+            <img src="images/icon_venue05.png" alt="">
+            灯光齐全
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 预定内容 -->
+    <!-- <div class="schedule">
+      <div class="sch_txt">预订时间</div>
+      <div class="sch_time">8月17日 9:00-14:00 <span></span></div>
+    </div> -->
+    <div class="item schedule">
+        <label for="datetime" class="sch_txt">预订时间</label>
+        <input id="datetime" type="date" placeholder="8月17日  9:00-14:00">
+    </div>
+    <!-- 详情 -->
+    <div class="ve_infotxt">
+      <div class="vei_title">详情</div>
+      <div class="vei_desc">青葵剧场位于江苏文化大厦四楼,面积300平方米，座位135个，声光电设备齐全。适合小型戏剧、话剧、音乐会及综合晚会演出及会议庆典等。</div>
+    </div>
+    <!-- 立即预约 -->
+    <div class="footer">
+      <div class="ve_allprice">共计
+          <div class="ve_price"><span>150</span>元/小时</div>
+        <!-- <span><sub>&yen;</sub>23</span> -->
+      </div>
+      <a class="submit" href="../文化生活/venue_order.html">立即预约</a>
+    </div>
+  </div>
+
+
+  <script src="lib/jquery-2.1.4.js"></script>
+  <script src="lib/fastclick.js"></script>
+  <script>
+    $(function () {
+      FastClick.attach(document.body);
+    });
+  </script>
+  <script src="js/jquery-weui.js"></script>
+  <script src="js/swiper.js"></script>
+  <script>
+    $(".swiper-banner").swiper({
+      loop: true,
+      autoplay: 3000,
+      paginationType: 'fraction', // 指示点采用分数模式
+    });
+  </script>
+</body>
+
+</html>

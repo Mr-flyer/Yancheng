@@ -1,0 +1,119 @@
+* { word-wrap: break-word; word-break: break-all; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+
+html, body, div, span, p, a, img, ul, li, q { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { line-height: 1; background-color: #fff; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, i th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ''; content: none; }
+
+a, a:active, a:hover { text-decoration: none; -webkit-appearance: none; }
+
+img { vertical-align: middle; border: none; -webkit-touch-callout: none; }
+
+ul, ol, dl { list-style-type: none; list-style: none; }
+
+input, button { -webkit-appearance: none; outline: none; border: none; font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; }
+
+div, input, li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.full, html, body { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: auto; }
+
+body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; position: relative; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; font-size: 16px; }
+
+html { font-size: 20vw; }
+
+@media screen and (max-width: 320px) { html { font-size: 64px; } }
+
+@media screen and (min-width: 540px) { html { font-size: 108px; } }
+
+body { min-width: 320px; max-width: 540px; margin: 0 auto; }
+
+.line-camp { text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.weui-btn { width: 100%; }
+
+.weui-btn.long { border-radius: 0; border: none; }
+
+.weui-btn.long::after { display: none; }
+
+.weui-btn.blue { background: #22c8d8; }
+
+.weui-btn.weui-btn_disabled.blue { background: rgba(34, 200, 216, 0.3); }
+
+.weui-content { background-color: #F4F4F4; min-height: 100vh; }
+
+header { padding: 0.37333rem 0.2rem 0; background: linear-gradient(to bottom, #22C8D8, #fff 50%); }
+
+.order_status .od_title { font-size: 22px; font-weight: bold; color: white; line-height: 1; padding-bottom: 0.13333rem; }
+
+.order_status .od_action { display: flex; align-items: center; }
+
+.order_status .od_btn { padding: 0 0.17333rem; background-color: #fff; font-size: 12px; font-weight: bold; color: #40cfdd; line-height: 0.33333rem; border-radius: 0.16667rem; margin-right: 0.12rem; }
+
+.order_status p { font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.8); }
+
+.card_float { margin-top: 0.26667rem; padding: 0.2rem 0.16rem; border-radius: 4px; background-color: #fff; overflow: hidden; box-shadow: -3px 5px 9px 0px rgba(134, 176, 172, 0.35); }
+
+.card_float .card_hd { font-size: 14px; font-weight: 500; color: #333333; display: flex; align-items: center; padding-bottom: 0.13333rem; }
+
+.card_float .card_hd .tag { padding: 0.04rem 0.10667rem; border-radius: 2px; border: 1px solid #22C8D8; font-size: 1px; color: #22c8d8; line-height: 1; margin-right: 0.06667rem; }
+
+.card_float .card_bd { padding: 0.06667rem 0.10667rem; border-radius: 4px; background-color: #F3F6F9; font-size: 12px; color: #333333; line-height: 1.2em; display: flex; }
+
+.card_float .card_bd > span { flex-shrink: 0; font-size: 12px; color: #999999; padding-right: 0.11333rem; }
+
+.card_float .card_bd > p { flex: 1; position: relative; }
+
+.card_float .card_bd > p::after { position: absolute; width: 6px; height: 6px; border-top: 1px solid #D7D7D7; border-right: 1px solid #D7D7D7; transform: rotateZ(45deg); }
+
+.card { margin-bottom: 0.06667rem; padding-top: 0.2rem; }
+
+.card .card_hd { padding-bottom: 0.2rem; border-bottom: 1px solid #F3F6F9; display: flex; }
+
+.card .card_bd { height: 0.54667rem; display: flex; justify-content: space-between; align-items: center; font-size: 14px; font-weight: 500; color: #999999; }
+
+.card .card_pic { flex-shrink: 0; width: 1.06667rem; height: 1.41333rem; border-radius: 4px; overflow: hidden; margin-right: 0.13333rem; }
+
+.card .card_pic > img { width: 100%; height: 100%; object-fit: cover; }
+
+.card .card_cont { flex: 1; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+
+.card .card_cont .order_title { font-size: 17px; font-weight: 500; color: #333333; text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.card .card_cont .order_desc > p { display: flex; align-items: flex-start; font-size: 13px; font-weight: 400; color: #999999; line-height: 18px; padding-bottom: 2px; }
+
+.card .card_cont .order_desc > p .icon { flex-shrink: 0; display: inline-flex; align-items: center; padding-right: 5px; }
+
+.card .card_cont .order_desc > p .txt { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.card .card_cont .order_desc > p img { width: 0.16rem; }
+
+.card .btn_group { font-size: 14px; color: #333333; }
+
+.card .btn_group span { display: inline-block; line-height: 0.4rem; border-radius: 0.2rem; padding: 0 0.2rem; border: 1px solid #BDBDBD; color: #999; box-sizing: border-box; }
+
+.card .btn_group span.red { background: linear-gradient(-35deg, #22c8d8, #22d8d2); border: none; font-size: 13px; font-weight: 500; color: #fff; }
+
+.card .btn_group span.blue { background: linear-gradient(-35deg, #ff6766, #ff9566); border: none; font-size: 13px; font-weight: 500; color: #fff; }
+
+section { background-color: #fff; margin: 0.06667rem 0; }
+
+section .title { line-height: 0.56rem; border-bottom: 1px solid #F3F6F9; font-size: 18px; font-weight: 500; color: #333333; padding: 0 0.2rem; }
+
+section .cell_item { height: 0.66667rem; border-bottom: 1px solid #F3F6F9; padding: 0 0.2rem; display: flex; justify-content: space-between; align-items: center; }
+
+section .cell_item:first-of-type > p { color: #333; }
+
+section .cell_item > span { flex-shrink: 0; font-size: 14px; color: #333333; }
+
+section .cell_item > p { flex: 1; text-align: right; font-size: 14px; color: #999999; }
+
+.weui-btn.weui-btn_default { line-height: 0.66667rem; font-size: 14px; color: #22c8d8; background-color: #fff; }

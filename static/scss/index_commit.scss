@@ -1,0 +1,41 @@
+@import './_tool';
+.search-container {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    padding-top: rem(20);
+    transform: translateY(0)
+}
+.hot-activity {
+    padding-top: rem(40);
+}
+
+nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: rem(30) 0;
+    margin: rem(-30) auto 0;
+    width: rem(690);
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow:-4px 7px 14px 0px rgba(134, 176, 172, 0.35);
+    > a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon {
+        width: rem(74);
+    }
+    span {
+        padding-top: rem(18);
+        line-height: 1;
+        font-size: 13px;
+        font-weight:500;
+        color:rgba(153,153,153,1);
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>技艺的传承 -- 详情</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/culture.css">
+
+</head>
+
+<body ontouchstart>
+
+    <div class='weui-content'>
+        <div class="swiper-container swiper-banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="pro_info.html"><img src="./upload/commodity02.png" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="pro_list.html"><img src="./upload/ynt_tourst_banner.png" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="pro_info.html"><img src="./upload/commodity02.png" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="pro_list.html"><img src="./upload/ynt_tourst_banner.png" /></a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- 选项 -->
+        <div class="tourst_info">
+            <div class="family_info_head">
+                <div class="family_info_head_titles">
+                    <div class="family_info_head_title">盐城老虎鞋</div>
+                    <div class="family_info_head_title_img">
+                        <img src="./images/icon_shoppingCar.png">
+                    </div>
+                </div>
+                <div class="family_informations">
+                    <div class="Attractions">
+                        <div>
+                            <img src="./images/icon_rank.png">
+                        </div>
+                        <div class="familyTrip_info">
+                            遗产级别:<span class="Attractions_num">民间艺术</span>
+                        </div>
+                    </div>
+                    <div class="Activities">
+                        <div>
+                            <img src="./images/icon_level.png">
+                        </div>
+                        <div class="familyTrip_info">
+                            遗产级别<span class="Activities_num">省</span>
+                        </div>
+                    </div>
+                    <div class="super_dinner">
+                        <div>
+                            <img src="./images/icon_clock.png">
+                        </div>
+                        <div class="familyTrip_info">
+                            申报日期<span class="super_dinner_num">2006</span>
+                        </div>
+                    </div>
+                    <div class="dinner_nums">
+                        <div>
+                            <img src="./images/icon_location.png">
+                        </div>
+                        <div class="familyTrip_info">
+                            所属地区<span class="dinner_num">江苏盐城盐都区</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="culture_text"></div>
+    </div>
+
+
+
+    <script src="./lib/jquery-2.1.4.js"></script>
+    <script src="./lib/fastclick.js"></script>
+    <script>
+        $(function() {
+            FastClick.attach(document.body);
+        });
+    </script>
+    <script src="./js/jquery-weui.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script>
+        $(".swiper-banner").swiper({
+            loop: true,
+            autoplay: 3000,
+            // paginationType: 'fraction',
+            slidesPerView: 1,
+            paginationClickable: true,
+        });
+
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+        });
+    </script>
+</body>
+
+</html>

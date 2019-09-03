@@ -1,0 +1,123 @@
+@import './_base';
+@import './_tool';
+
+
+// .container_wrapper {
+//     display: flex;
+//     flex-direction: column;
+// }
+#container, #parking, #gate {
+    width: 100vw;
+    // height: 100vh - vh(100);
+    height: 100vh;
+    background-color: aqua;
+}
+.popup {
+    position: absolute;
+    z-index: 99;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    // padding: 0 rem(30) rem(30);
+    width: rem(486);
+    background-color: #fff;
+    border-radius: 4px;
+    .icon_close {
+        align-self: stretch;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 rem(30);
+        // background-color: aqua;
+        > img {
+            width: rem(25);
+        }
+    }
+    .p_hd {
+        height: rem(70);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: rem(30);
+    }
+    .p_bd {
+        padding: 0 rem(30) rem(30) rem(30);  
+    }
+    .card {
+        display: flex;
+        align-items: flex-start;
+        padding: rem(20) 0;
+    }
+    .card_pic {
+        flex-shrink: 0;
+        width: rem(120);
+        height: rem(120);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-right: rem(16);
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .swiper-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .food_img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    .card_cont {
+        font-size: 13px;
+        color:rgba(102,102,102,1);
+        line-height: 17px;
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis; // 溢出文本省略号显示
+        display: -webkit-box;
+        -webkit-line-clamp: 3; // 限制块级元素文本行数
+        /*! autoprefixer: off */
+        -webkit-box-orient: vertical; // 重置文本排列方式
+        /* autoprefixer: on */
+    }
+    .p_btn {
+        background:linear-gradient(146deg,rgba(34,200,216,1),rgba(34,216,188,1));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: rem(78);
+        border-radius: 4px;
+        font-size: 14px;
+        color:rgba(255,255,255,1);
+        .icon_receiver {
+            width: rem(28);
+            margin-right: rem(16);
+        }
+    }
+}
+
+.tabbar_wrapper {
+    width: 100%;
+    display: flex;
+    height: rem(100);
+    flex-shrink: 0;
+    .tabbar_item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size:12px;
+        color:rgba(153,153,153,1);
+        &.active {
+            color: #22C8D8 
+        }
+        > img {
+            margin-bottom: 4px;
+            width: rem(44);
+        }
+    }
+}

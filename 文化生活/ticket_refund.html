@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>退款</title>
+  <base href="../static/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="lib/weui.min.css">
+  <link rel="stylesheet" href="css/jquery-weui.css">
+  <link rel="stylesheet" href="css/ticket_refund.css">
+</head>
+
+<body ontouchstart>
+  <!--主体-->
+  <div class="weui-content">
+    <div class="weui-cells weui-cells_form wy-address-edit">
+        <!-- 申请类型 -->
+      <div class="weui-cell select">
+        <div class="weui-cell__hd"><label class="weui-label wy-lab">申请类型</label></div>
+        <div class="weui-cell__bd">
+          <select class="weui-select" name="select1">
+            <option selected="" value="1">我要退货退款</option>
+            <option value="2">我要退款（无需退货）</option>
+          </select>
+        </div>
+      </div>
+      <!-- 申请原因 -->
+      <div class="weui-cell select">
+        <div class="weui-cell__hd"><label class="weui-label wy-lab">申请原因</label></div>
+        <div class="weui-cell__bd">
+          <select class="weui-select" name="select1">
+            <option default hidden value="">点击选择申请原因</option>
+            <option value="1">不喜欢、效果不好</option>
+            <option value="2">货物与描述不符</option>
+            <option value="3">商品有划痕或破损</option>
+            <option value="4">质量问题</option>
+            <option value="5">卖家发错货</option>
+            <option value="6">假冒商品</option>
+            <option value="7">其他</option>
+          </select>
+        </div>
+      </div>
+      <!-- 退款金额 -->
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label wy-lab">退款金额</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" disabled value="￥50">
+          <span>最多￥50</span>
+        </div>
+      </div>
+      <!-- 提示 -->
+      <p class="tips">若退款成功，将在1-7个工作日内退回支付账户</p>
+      <!-- 申请说明 -->
+      <div class="weui-cells textarea">
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label">申请说明</label>
+          </div>
+          <div class="weui-cell__bd">您还可以输入170个字</div>
+        </div>
+        <div class="weui-cell textarea">
+          <div class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="必填，请您详细填写申请说明" rows="3"></textarea>
+            <!-- <div class="weui-textarea-counter"><span>0</span>/200</div> -->
+          </div>
+        </div>
+      </div>
+      <!-- 联系电话 -->
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label wy-lab">联系电话</label></div>
+        <div class="weui-cell__bd"><input class="weui-input" type="text" placeholder="13512532981"></div>
+      </div>
+    </div>
+    <footer>
+      <a href="javascript:void(0);">确认退款</a>
+    </footer>
+    <!-- <div class="weui-btn-area">
+      <a class="weui-btn weui-btn_primary" href="javascript:" style="background-color: #22C8D8;">确认退款</a>
+    </div> -->
+    refund
+  </div>
+
+  <script src="lib/jquery-2.1.4.js"></script>
+  <script src="lib/fastclick.js"></script>
+  <script>
+    $(function () {
+      FastClick.attach(document.body);
+    });
+  </script>
+
+  <script src="js/jquery-weui.js"></script>
+  <script src="js/city-picker.js"></script>
+  <script>
+    $("#address").cityPicker({
+      title: "选择出发地",
+      onChange: function (picker, values, displayValues) {
+        console.log(values, displayValues);
+      }
+    });
+  </script>
+</body>
+
+</html>

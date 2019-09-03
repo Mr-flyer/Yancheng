@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>市场演出 -- 查看更多</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/marketPerform_list.css">
+</head>
+
+<body ontouchstart>
+    <!--主体-->
+    <div class='weui-content'>
+        <header>
+            <!-- 搜索框 -->
+            <div class="search_cont">
+                <div class="search">
+                    <img src="images/icon_search_gray.png" />
+                    <input type="search" placeholder="搜索您喜欢的">
+                </div>
+            </div>
+        </header>
+        <nav>
+            <a href="javascript:void(0);">
+                区域
+                <!-- <i></i> -->
+            </a>
+            <a href="javascript:void(0);">
+                类型
+            </a>
+            <a href="javascript:void(0);">
+                价格
+            </a>
+        </nav>
+        <!-- 为您推荐 -->
+        <section class="recommend">
+            <div class="title">为您推荐</div>
+            <div class="rmd_bd">
+                <!-- 卡片一 -->
+                <div class="rmd_item">
+                    <div class="rmd_pic" data-txt="话剧歌剧">
+                        <img src="images/Mrflyer.jpg" alt="">
+                    </div>
+                    <div class="rmd_cont">
+                        <div class="rmd_hd">
+                            <div class="rmd_title">夏日的旋律夏日的旋律夏日的旋律夏日的旋律夏日的旋律</div>
+                            <div class="rmd_desc">
+                                <p>
+                                    <span class="icon">&#8203;<img src="images/icon_clock.png" /></span>
+                                    <span>2019.08.24 15:00</span>
+                                </p>
+                                <p>
+                                    <span class="icon">&#8203;<img src="images/icon_clock.png" /></span>
+                                    <span>江苏省盐城市盐都区郭猛镇侍还是有啥文字</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rmd_bd">
+                            <div class="rmd_price">
+                                <span><b>&yen; </b>260</span> 起
+                            </div>
+                            <div class="rmd_btn">去购买</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 卡片二 -->
+                <div class="rmd_item">
+                    <div class="rmd_pic" data-txt="话剧歌剧">
+                        <img src="images/Mrflyer.jpg" alt="">
+                    </div>
+                    <div class="rmd_cont">
+                        <div class="rmd_hd">
+                            <div class="rmd_title">夏日的旋律夏日的旋律夏日的旋律夏日的旋律夏日的旋律</div>
+                            <div class="rmd_desc">
+                                <p>
+                                    <span class="icon">&#8203;<img src="images/icon_clock.png" /></span>
+                                    <span>2019.08.24 15:00</span>
+                                </p>
+                                <p>
+                                    <span class="icon">&#8203;<img src="images/icon_clock.png" /></span>
+                                    <span>江苏省盐城市盐都区郭猛镇侍还是有啥文字</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rmd_bd">
+                            <div class="rmd_price">
+                                <span><b>&yen; </b>260</span> 起
+                            </div>
+                            <div class="rmd_btn">去购买</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script src="lib/fastclick.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+        $(".swiper-banner").swiper({
+            loop: true, // 轮播
+            centeredSlides: true, // 当前active项 居中
+            slidesPerView: "auto",
+            initialSlide: 1,
+        });
+    </script>
+</body>
+
+</html>

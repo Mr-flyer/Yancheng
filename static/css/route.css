@@ -1,0 +1,410 @@
+* {
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+div,
+span,
+p,
+a,
+img,
+ul,
+li,
+q {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+html,
+body {
+    line-height: 1;
+    background-color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q,
+blockquote {
+    quotes: none;
+}
+
+q::before,
+q::after,
+blockquote::before,
+blockquote::after {
+    content: '';
+    content: none;
+}
+
+a,
+a:active,
+a:hover {
+    text-decoration: none;
+    -webkit-appearance: none;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+    -webkit-touch-callout: none;
+}
+
+ul,
+ol,
+dl {
+    list-style-type: none;
+    list-style: none;
+}
+
+input,
+button {
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif;
+}
+
+div,
+input,
+li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.full,
+html,
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif;
+    position: relative;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    font-size: 16px;
+}
+
+html {
+    font-size: 20vw;
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 64px;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    html {
+        font-size: 108px;
+    }
+}
+
+body {
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.line-camp {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+}
+
+.dv {
+    width: 2rem;
+    height: 2rem;
+    background-color: aqua;
+    border: 1px solid #000;
+}
+
+.body {
+    background-color: #ECF5FF;
+}
+
+.Route_Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 0.2rem 0rem 0.2rem;
+    height: 100vh;
+    width: 100vw;
+    background: #f4f4f5 url("../images/route_status.png") no-repeat;
+    background-size: 100% 60%;
+}
+
+.Route_title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 0.66667rem;
+    padding: 0.46667rem 0rem 0rem 0rem;
+}
+
+.title_back {
+    width: 0.24rem;
+    justify-content: flex-start;
+}
+
+.title_back>a>img {
+    width: 100%;
+    height: 100%;
+}
+
+.title_text {
+    font-size: 0.24rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: white;
+    margin-left: 1.58rem;
+}
+
+.Route_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.17333rem;
+}
+
+.body_up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 4.6rem;
+    height: 2.66667rem;
+    background: white;
+    box-shadow: 0rem 0.16rem 0.26667rem 0rem rgba(142, 193, 255, 0.26);
+    border-radius: 0.05333rem;
+    padding: 0.26667rem 0.46667rem 0.26667rem 0.46667rem;
+}
+
+.option_up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0.86667rem;
+    margin-bottom: 0.33333rem;
+}
+
+.option_down {
+    display: flex;
+    align-items: center;
+    height: 0.86667rem;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option>div:last-of-type {
+    margin-top: 0.13333rem;
+}
+
+.option_icon {
+    width: 0.49333rem;
+    height: 0.49333rem;
+}
+
+.option_icon>img {
+    width: 100%;
+    height: 100%;
+}
+
+.option_down>a:last-of-type>div {
+    margin-left: 0.48rem;
+}
+
+.option>div:last-of-type {
+    font-size: 0.18667rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #333333;
+}
+
+.body_middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0.22667rem;
+    margin-top: 0.26667rem;
+    width: 100%;
+}
+
+.body_middle_title {
+    font-size: 0.24rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #333333;
+}
+
+.body_middle_to {
+    width: 0.08667rem;
+}
+
+.body_middle_to img {
+    width: 100%;
+    height: 100%;
+}
+
+.body_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.2rem;
+    background-color: #f4f4f5;
+}
+
+.Route_show {
+    margin-bottom: 0.06667rem;
+    width: 4.6rem;
+    height: 1.6rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.Route_show>a {
+    display: flex;
+    padding: 0.26667rem 0.12667rem 0.26667rem 0.13333rem;
+    background-color: #ffffff;
+}
+
+.Route_img {
+    width: 1.66667rem;
+    height: 1.06667rem;
+    border-radius: 0.05333rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.Route_img>img {
+    width: 100%;
+    height: 100%;
+}
+
+.Route_info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.12667rem;
+    justify-content: space-between;
+}
+
+.Route_info_title {
+    max-width: 2.54667rem;
+    font-size: 0.22667rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #333333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+}
+
+.Route_info_text {
+    max-width: 2.54667rem;
+    font-size: 0.17333rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #999999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.Route_info_visit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.Route_info_visitNum_img {
+    height: 0.08667rem;
+    width: 0.12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.Route_info_visitNum_img>img {
+    width: 100%;
+    height: 100%;
+}
+
+.Route_info_visitNum_Num {
+    font-size: 0.13333rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #666666;
+    line-height: 1;
+}
+
+.Route_info_visitNum_Nums {
+    font-size: 0.24rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #22c8d8;
+    line-height: 1;
+    margin-right: 6px;
+}

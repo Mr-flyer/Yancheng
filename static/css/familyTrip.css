@@ -1,0 +1,160 @@
+* { word-wrap: break-word; word-break: break-all; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+
+html, body, div, span, p, a, img, ul, li, q { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { line-height: 1; background-color: #fff; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ''; content: none; }
+
+a, a:active, a:hover { text-decoration: none; -webkit-appearance: none; }
+
+img { vertical-align: middle; border: none; -webkit-touch-callout: none; }
+
+ul, ol, dl { list-style-type: none; list-style: none; }
+
+input, button { -webkit-appearance: none; outline: none; border: none; font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; }
+
+div, input, li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.full, html, body { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; }
+
+body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; position: relative; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; font-size: 16px; }
+
+html { font-size: 20vw; }
+
+@media screen and (max-width: 320px) { html { font-size: 64px; } }
+
+@media screen and (min-width: 540px) { html { font-size: 108px; } }
+
+body { min-width: 320px; max-width: 540px; margin: 0 auto; }
+
+.line-camp { text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /*! autoprefixer: off */ -webkit-box-orient: vertical; /* autoprefixer: on */ }
+
+.dv { width: 2rem; height: 2rem; background-color: aqua; border: 1px solid #000; }
+
+.family_container { display: flex; flex-direction: column; align-items: center; }
+
+.family_bg { width: 5rem; height: 2.61333rem; }
+
+.family_bg > img { width: 100%; height: 100%; object-fit: cover; }
+
+.family_info { width: 100vw; background-color: white; display: flex; flex-direction: column; align-items: center; }
+
+.family_info_head { width: 4.6rem; background: white; box-shadow: 2px 2px 3px 0px rgba(34, 200, 216, 0.15); border-radius: 0.05333rem; display: flex; flex-direction: column; align-items: center; padding: 0.26rem 0.28667rem 0.17333rem; z-index: 1001; transform: translateY(-10.7vw); }
+
+.family_info_head_title { font-size: 0.29333rem; font-family: PingFang SC; font-weight: bold; color: #333333;  align-self: flex-start; margin-bottom: 0.20667rem; }
+
+.family_informations { width: 100%; display: flex; flex-wrap: wrap; }
+
+.family_informations > div { width: 50%; display: flex; align-items: center;  margin-bottom: 0.13333rem; }
+
+.familyTrip_info { font-size: 0.17333rem; font-family: PingFang SC; font-weight: 400; color: #333333; line-height: 1; display: flex; align-items: center; justify-content: center; }
+
+.shopping_info { height: 0.16667rem; font-size: 0.17333rem; font-family: PingFang SC; font-weight: 400; color: #333333; line-height: 1; }
+
+.Attractions { display: flex; align-items: center; }
+
+.Attractions,
+.Activities,
+.super_dinner,
+.dinner_nums {
+    flex-shrink: 0;
+}
+
+.Attractions> div:first-of-type,
+.Activities> div:first-of-type,
+.super_dinner> div:first-of-type,
+.dinner_nums> div:first-of-type {
+    flex-shrink: 0;
+}
+
+.Attractions > div:first-of-type { width: 0.18667rem; height: 100%;  display: flex; align-items: center; justify-content: center; margin-right: 0.07333rem;}
+
+.Attractions > div:first-of-type > img { width: 100%; height: 100%; }
+
+.Activities { display: flex; align-items: center; }
+
+.Activities > div:first-of-type { width: 0.18667rem; height: 100%; margin-right: 0.07333rem; display: flex; align-items: center; justify-content: center; }
+
+.Activities > div:first-of-type > img { width: 100%; height: 100%; }
+
+.super_dinner { display: flex; align-items: center; }
+
+.super_dinner > div:first-of-type { width: 0.18667rem; height: 100%; margin-right: 0.07333rem; display: flex; align-items: center; justify-content: center; }
+
+.super_dinner > div:first-of-type > img { width: 100%; height: 100%; }
+
+.dinner_nums { display: flex; align-items: center; }
+
+.dinner_nums > div:first-of-type { width: 0.19333rem; height: 100%; margin-right: 0.07333rem; display: flex; align-items: center; justify-content: center; }
+
+.dinner_nums > div:first-of-type > img { width: 100%; height: 100%; }
+
+.family_info_head_info { display: flex; align-items: center; justify-content: baseline; }
+
+.shopping { display: flex; align-items: center; width: 0.18rem; height: 100%; margin-right: 0.07333rem; }
+
+.shopping > img { width: 100%; }
+
+.shopping_info { display: flex; align-items: center; justify-content: center; }
+
+.family_info_body { display: flex; flex-direction: column; padding: 0rem 0.2rem 0rem 0.2rem; background: white; z-index: 1001; transform: translateY(-9.5vw); }
+.family_info_body img {
+    max-width: 100%;
+}
+
+.body_data { display: flex; width: 100%; align-items: center; justify-content: flex-start; margin-top: 0.23333rem; }
+
+.body_data > div:first-of-type { width: 0.02667rem; height: 0.17333rem; margin-right: 0.07333rem; display: flex; align-items: center; justify-content: center; }
+
+.body_data > div:first-of-type > img { width: 100%; height: 100%; }
+
+.day { height: 0.17333rem; font-size: 0.24rem; font-family: PingFang SC; font-weight: bold; color: #333333; line-height: 0.31333rem; display: flex; align-items: center; justify-content: center; }
+
+.experience { margin-top: 0.2rem; }
+
+.body_placeAndtime { display: flex; align-items: center; width: 100%; justify-content: space-between; }
+
+.body_where { display: flex; align-items: center; justify-content: center; }
+
+.body_where > div:first-of-type { width: 0.18667rem; height: 0.18667rem; border-radius: 50%; margin-right: 0.05333rem; display: flex; align-items: center; justify-content: center; }
+
+.body_where > div:first-of-type > img { width: 100%; height: 100%; }
+
+.body_where > div:last-of-type { height: 0.18rem; font-size: 0.18667rem; font-family: PingFang SC; font-weight: 500; color: #333333; line-height: 0.31333rem; display: flex; align-items: center; justify-content: center; }
+
+.body_time { display: flex; align-items: center; justify-content: center; }
+
+.body_time > div:first-of-type { width: 0.17333rem; height: 0.17333rem; border-radius: 50%; margin-right: 0.08rem; display: flex; align-items: center; justify-content: center; }
+
+.body_time > div:first-of-type > img { width: 100%; height: 100%; }
+
+.body_time > div:last-of-type { font-size: 0.16rem; font-family: PingFang SC; font-weight: 400; color: #5a6169; line-height: 0.31333rem; display: flex; align-items: center; justify-content: center; }
+
+.body_artical { font-size: 0.18667rem; font-family: PingFang SC; font-weight: 400; color: #333333; line-height: 0.28rem; margin-top: 0.16667rem; }
+
+.body_pic { width: 4.6rem; height: 2.86667rem; border-radius: 8px; margin-top: 0.15333rem; display: flex; align-items: flex-end; justify-content: flex-start; }
+
+.body_pic > img { position: absolute; width: 4.6rem; height: 2.86667rem; }
+
+.family_sign { width: 0.66667rem; height: 0.25333rem; background: white; opacity: 0.6; border-radius: 0.12667rem; display: flex; justify-content: center; align-items: center; margin-left: 0.16rem; margin-bottom: 0.16rem; }
+
+.family_sign > div:first-of-type { width: 0.09333rem; height: 0.13333rem; display: flex; align-items: center; justify-content: center; margin-right: 8px; }
+
+.family_sign > div:first-of-type > img { width: 100%; height: 100%; }
+
+.locaion { height: 0.16rem; font-size: 0.16rem; font-family: PingFang SC; font-weight: 400; color: #333333; line-height: 0.31333rem; display: flex; align-items: center; justify-content: center; }
+
+.end { margin-top: 0.16rem; display: flex; width: 100%; align-items: center; justify-content: flex-start; }
+
+.end > div:first-of-type { width: 0.02667rem; height: 0.17333rem; margin-right: 0.07333rem; display: flex; align-items: center; justify-content: center; }
+
+.end > div:first-of-type > img { width: 100%; height: 100%; }

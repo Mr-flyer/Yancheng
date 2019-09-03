@@ -1,0 +1,121 @@
+@import './_base';
+@import './_tool';
+
+header {
+    height: rem(128);
+    .status-bar {
+        height: rem(40);
+    }
+    .nav-bar {
+        height: rem(88);
+    }
+}
+.weui-panel:after, 
+.weui-panel:before {
+    display: none;
+}
+.weui-content {
+    padding-left: rem(30);
+    padding-right: rem(30);
+}
+.weui-media-box_appmsg {
+    padding-right: 0;
+    padding-left: 0;
+    align-items: stretch;
+    &::before {
+        left: 0;
+    }
+    .weui-media-box__hd {
+        width: rem(226);
+        height: rem(158);
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+    }
+    .weui-media-box__thumb {
+        object-fit: cover;
+    }
+}
+.weui-media-box_appmsg .weui-media-box__hd::after {
+    position: absolute;
+    right: 0; top: 0;
+    line-height: 1;
+    padding: rem(10) rem(20);
+    text-align: center;
+    font-size: 12px;
+    transform: scale(.83);
+    transform-origin: right top;
+    font-weight: normal;
+    color: #fff;
+    border-radius:0px 0px 0px 8px;
+}
+.weui-media-box_appmsg:nth-of-type(1) .weui-media-box__hd::after{
+    content: 'TOP.1';
+    background-color: #FAAD14;
+}
+.weui-media-box_appmsg:nth-of-type(2) .weui-media-box__hd::after{
+    content: 'TOP.2';
+    background-color: #22C8D8;
+}
+.weui-media-box_appmsg:nth-of-type(3) .weui-media-box__hd::after{
+    content: 'TOP.3';
+    background-color: #31CF94;
+}
+.weui-media-box__bd {
+    // background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .weui-media-box__title {
+        color: #333;
+        font-size: 17px;
+        line-height: 1.2em;
+        margin-bottom: rem(20);
+        font-weight: 500;
+        white-space: normal;
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis; // 溢出文本省略号显示
+        display: -webkit-box;
+        -webkit-line-clamp: 2; // 限制块级元素文本行数
+        /*! autoprefixer: off */
+        -webkit-box-orient: vertical; // 重置文本排列方式
+        /* autoprefixer: on */
+    }
+    .weui-media-box__desc {
+        color: #999;
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+// 加载更多
+.weui-loadmore__tips {
+    color: #CDD1D4;
+    font-size: 12px;
+}
+
+footer {
+    display: flex;
+    height: rem(100);
+    position: fixed;
+    bottom: 0;left: 0;
+    width: 100%;
+    border-top: 1px solid #EAEEF0;
+    box-sizing: border-box;
+    > a {
+        flex: 1;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        // color:rgba(34,200,216,1);
+        color: #999;
+    }
+    img {
+        width: rem(44);
+        margin-bottom: rem(10);
+    }
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>演绎购票</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/ticket_shopping.css">
+</head>
+
+<body ontouchstart>
+    <div class="container">
+
+        <!--主体-->
+        <div class='weui-content' id="listwrap">
+            <!--下拉刷新-->
+            <div class="weui-pull-to-refresh__layer">
+                <div class="weui-pull-to-refresh__arrow"></div>
+                <div class="weui-pull-to-refresh__preloader"></div>
+                <div class="down">下拉刷新</div>
+                <div class="up">释放刷新</div>
+                <div class="refresh">正在刷新</div>
+            </div>
+            <!--顶部轮播-->
+            <div class="header">
+                <div class="swiper-container swiper-banner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="javascript:void(0);"><img src="upload/ban1.jpg" /></a></div>
+                        <div class="swiper-slide"><a href="javascript:void(0);"><img src="upload/ban2.jpg" /></a></div>
+                        <div class="swiper-slide"><a href="javascript:void(0);"><img src="upload/ban3.jpg" /></a></div>
+                        <div class="swiper-slide"><a href="javascript:void(0);"><img src="upload/ban4.jpg" /></a></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!--顶部搜索-->
+                <div class="search_container">
+                    <div class="search_box">
+                        <img src="images/icon_search_gray.png" alt="">
+                        <input type="search" placeholder="搜索您喜欢的">
+                    </div>
+                </div>
+                <nav>
+                    <a href="../文化生活/marketPerform.html">
+                        <img class="icon" src="images/nav_venue01.png" alt="">
+                        <span>精品路线</span>
+                    </a>
+                    <a href="../文化生活/publicGood.html">
+                        <img class="icon" src="images/nav_venue02.png" alt="">
+                        <span>公益演出</span>
+                    </a>
+                    <a href="../文化生活/venue_list.html">
+                        <img class="icon" src="images/nav_venue03.png" alt="">
+                        <span>场馆预订</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- 近期热门 -->
+            <section>
+                <div class="title">近期热门</div>
+                <div class="sct_bd">
+                    <div class="ticket_list">
+                        <div class="ticket_item">
+                            <div class="ticket_pic" data-txt="话剧歌剧">
+                                <img src="images/Mrflyer.jpg" alt="">
+                            </div>
+                            <div class="ticket_cont">
+                                <div class="ticket_title">罗密欧与朱丽叶</div>
+                                <div class="ticket_price">
+                                    <span>&yen;260</span>起
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket_item">
+                            <div class="ticket_pic" data-txt="儿童亲子">
+                                <img src="images/Mrflyer.jpg" alt="">
+                            </div>
+                            <div class="ticket_cont">
+                                <div class="ticket_title">罗密欧与朱丽叶</div>
+                                <div class="ticket_price">
+                                    <span>&yen;260</span>起
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket_item">
+                            <div class="ticket_pic" data-txt="展览休闲">
+                                <img src="images/Mrflyer.jpg" alt="">
+                            </div>
+                            <div class="ticket_cont">
+                                <div class="ticket_title">罗密欧与朱丽叶</div>
+                                <div class="ticket_price">
+                                    <span>&yen;260</span>起
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket_item">
+                            <div class="ticket_pic" data-txt="话剧歌剧">
+                                <img src="images/Mrflyer.jpg" alt="">
+                            </div>
+                            <div class="ticket_cont">
+                                <div class="ticket_title">罗密欧与朱丽叶</div>
+                                <div class="ticket_price">
+                                    <span>&yen;260</span>起
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 最新公益 -->
+            <section class="benefit">
+                <div class="title">最新公益</div>
+                <div class="sct_bd">
+                    <div class="ticket_list">
+                        <div class="ticket_item">
+                            <div class="ticket_pic" data-txt="话剧歌剧">
+                                <img src="images/Mrflyer.jpg" alt="">
+                            </div>
+                            <div class="ticket_cont">
+                                <div class="ticket_title">罗密欧与朱丽叶</div>
+                                <div class="ticket_price">
+                                    2019.08.19
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket_item">
+                            <div class="ticket_pic" data-txt="儿童亲子">
+                                <img src="images/Mrflyer.jpg" alt="">
+                            </div>
+                            <div class="ticket_cont">
+                                <div class="ticket_title">罗密欧与朱丽叶</div>
+                                <div class="ticket_price">
+                                    2019.08.19
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket_item">
+                            <div class="ticket_pic" data-txt="展览休闲">
+                                <img src="images/Mrflyer.jpg" alt="">
+                            </div>
+                            <div class="ticket_cont">
+                                <div class="ticket_title">罗密欧与朱丽叶</div>
+                                <div class="ticket_price">
+                                    2019.08.19
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket_item">
+                            <div class="ticket_pic" data-txt="话剧歌剧">
+                                <img src="images/Mrflyer.jpg" alt="">
+                            </div>
+                            <div class="ticket_cont">
+                                <div class="ticket_title">罗密欧与朱丽叶</div>
+                                <div class="ticket_price">
+                                    2019.08.19
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 为您推荐 -->
+            <section class="recommend">
+                <div class="title">为您推荐</div>
+                <div class="rmd_bd">
+                    <!-- 卡片一 -->
+                    <div class="rmd_item">
+                        <div class="rmd_pic" data-txt="话剧歌剧">
+                            <img src="images/Mrflyer.jpg" alt="">
+                        </div>
+                        <div class="rmd_cont">
+                            <div class="rmd_hd">
+                                <div class="rmd_title">夏日的旋律夏日的旋律夏日的旋律夏日的旋律夏日的旋律</div>
+                                <div class="rmd_desc">
+                                    <p>
+                                        <span class="icon">&#8203;<img src="images/icon_clock.png" /></span>
+                                        <span>2019.08.24 15:00</span>
+                                    </p>
+                                    <p>
+                                        <span class="icon">&#8203;<img src="images/icon_location.png" /></span>
+                                        <span>江苏省盐城市盐都区郭猛镇侍还是有啥文字</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="rmd_bd">
+                                <div class="rmd_price">
+                                    <span><b>&yen; </b>260</span> 起
+                                </div>
+                                <div class="rmd_btn">去购买</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 卡片二 -->
+                    <div class="rmd_item">
+                        <div class="rmd_pic" data-txt="话剧歌剧">
+                            <img src="images/Mrflyer.jpg" alt="">
+                        </div>
+                        <div class="rmd_cont">
+                            <div class="rmd_hd">
+                                <div class="rmd_title">夏日的旋律夏日的旋律夏日的旋律夏日的旋律夏日的旋律</div>
+                                <div class="rmd_desc">
+                                    <p>
+                                        <span class="icon">&#8203;<img src="images/icon_clock.png" /></span>
+                                        <span>2019.08.24 15:00</span>
+                                    </p>
+                                    <p>
+                                        <span class="icon">&#8203;<img src="images/icon_location.png" /></span>
+                                        <span>江苏省盐城市盐都区郭猛镇侍还是有啥文字</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="rmd_bd">
+                                <div class="rmd_price">
+                                    <span><b>&yen; </b>260</span> 起
+                                </div>
+                                <div class="rmd_btn">去购买</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- tabbar -->
+        <footer>
+            <a href="javascript:viod(0);" class="active">
+                <img src="images/icon_nav_index_active.png" />
+                <span>首页</span>
+            </a>
+            <a href="../文化生活/ticket_list.html">
+                <img src="images/icon_nav_ticket.png" />
+                <span>票夹</span>
+            </a>
+            <a href="../文化生活/user_center.html">
+                <img src="images/icon_nav_touruser.png" />
+                <span>我的</span>
+            </a>
+        </footer>
+    </div>
+
+
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+        $(".swiper-banner").swiper({
+            loop: true,
+            autoplay: 3000
+        });
+        //============================ 下拉刷新
+        $("#listwrap").pullToRefresh().on("pull-to-refresh", function () {
+            setTimeout(function () {
+                $("#listwrap").pullToRefreshDone(); // 重置下拉刷新
+            }, 1500); //模拟延迟
+        });
+    </script>
+</body>
+
+</html>

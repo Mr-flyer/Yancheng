@@ -1,0 +1,254 @@
+@import './_base';
+@import './_tool';
+body {
+    background-color: #F4F4F4;
+}
+header {
+    height: rem(370);
+    position: relative;
+    overflow: hidden;
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// 重写input 占位符样式
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 14px;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #fff;
+  font-size: 14px;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #fff;
+  font-size: 14px;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #fff;
+  font-size: 14px;
+}
+// 页头
+.header_mask {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    padding: rem(90) rem(30) 0;
+    background: linear-gradient(to right, #22C8D8, transparent);
+    .sate_title {
+        font-size: 23px;
+        font-weight:bold;
+        color:rgba(255,255,255,1);
+        line-height: 1;
+    }
+    .sate_desc {
+        font-size:14px;
+        font-weight:400;
+        color:rgba(243,246,249,1);
+        line-height: 1;
+        padding: rem(18) 0 rem(45);
+        > span {
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+    .hd_search {
+        height: rem(60);
+        border-radius: rem(30);
+        background:rgba(255,255,255,.6);
+        padding: 0 rem(26);
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        > .icon_search {
+            flex-shrink: 0;
+            width: rem(34);
+            margin-right: rem(26);
+        }
+        .ipt {
+            flex: 1;
+            background-color: transparent;
+        }
+    }
+}
+
+// 悬层卡片
+.card_float {
+    position: relative;
+    z-index: 9;
+    width: rem(690);
+    margin: rem(-60) auto 0;
+    padding: 0 rem(25);
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow:0px 12px 20px 0px rgba(34,200,216,0.26);
+}
+// 卡片设置
+.card_right {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(30) 0;
+    border-bottom: 1px solid #F3F6F9;
+    .card_cont {
+        padding-right: rem(25);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card_body {
+        .sate_title {
+            position: relative;
+            font-size: 17px;
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height: 21px;
+            > div {
+                display: inline;
+                text-overflow: -o-ellipsis-lastline;
+                overflow: hidden;
+                text-overflow: ellipsis; // 溢出文本省略号显示
+                display: -webkit-box;
+                -webkit-line-clamp: 2; // 限制块级元素文本行数
+                /*! autoprefixer: off */
+                -webkit-box-orient: vertical; // 重置文本排列方式
+                /* autoprefixer: on */
+            }
+            span {
+                display: inline-block;
+                padding: rem(8);
+                margin-left: rem(10);
+                line-height: 1;
+                background:linear-gradient(-31deg,rgba(255,103,102,1),rgba(255,149,102,1));
+                border-radius:2px;
+                font-size:12px;
+                transform: scale(.916);
+                font-weight:500;
+                color:rgba(255,255,255,1);
+            }
+        }
+        .sate_desc {
+            font-size: 12px;
+            font-weight:400;
+            color:rgba(102,102,102,1);
+            line-height: 17px;
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis; // 溢出文本省略号显示
+            display: -webkit-box;
+            -webkit-line-clamp: 2; // 限制块级元素文本行数
+            /*! autoprefixer: off */
+            -webkit-box-orient: vertical; // 重置文本排列方式
+            /* autoprefixer: on */
+        }
+    }
+    .card_footer {
+        font-size: 11px;
+        font-weight:400;
+        color:rgba(153,153,153,1);
+        display: flex;
+        justify-content: space-between;
+        .sate_number {
+            display: flex;
+            align-items: center;
+            > img {
+                width: rem(18);
+                margin-right: 4px;
+            }
+        }
+    }
+    .card_pic {
+        flex-shrink: 0;
+        width: rem(222);
+        height: rem(190);
+        border-radius: 4px;
+        overflow: hidden;
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+// 大家都爱看
+.love_everybody {
+    margin-top: rem(50);
+    padding: 0 rem(30);
+    .title {
+        font-size: 18px;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+        line-height: 1;
+        margin-bottom: rem(20);
+    }
+    .lvc_hd {
+        display: flex;
+        .tab_btn {
+            padding: 0 rem(15);
+            line-height: 21px;
+            border-radius: 12px;
+            font-size: 14px;
+            color:#666;
+            margin-right: rem(17);
+            &.active {
+                background-color: #22C8D8;
+                font-weight:bold;
+                color: #fff;
+            }
+        }
+    }
+    .lvc_bd {
+        padding-top: rem(30);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    // 每一项
+    .tab_item {
+        width: rem(334);
+        background:rgba(255,255,255,1);
+        border-radius: 4px;
+        margin-bottom: rem(20);
+        .lvc_pic {
+            height: rem(334);
+            overflow: hidden;
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .lvc_footer {
+        padding: rem(16) rem(24) rem(30);
+        .lvc_title {
+            font-size: 13px;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            line-height: 19px;
+            padding-bottom: rem(12);
+        }
+        .lvc_other {
+            font-size: 11px;
+            font-weight:400;
+            color:rgba(153,153,153,1);
+            display: flex;
+            justify-content: space-between;
+            > div:last-of-type {
+                display: flex;
+                align-items: center;
+                > img {
+                    width: rem(20);
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}

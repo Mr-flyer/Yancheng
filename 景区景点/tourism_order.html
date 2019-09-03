@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>景点门票购买页 --- 立即购买</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/tourism_order.css">
+</head>
+
+<body ontouchstart>
+    <!--主体-->
+    <div class='weui-content'>
+        <header>
+            <div class="h1">中华麋鹿园</div>
+            <div class="order_desc">
+                <p>
+                    <span>收费项目：</span>
+                    <span class="txt">大门票</span>
+                </p>
+                <p>
+                    <span>使用时间：</span>
+                    <span class="txt">2019-08-23</span>
+                </p>
+                <p>
+                    <span>有效期：</span>
+                    <span class="txt">指定入园日期当日可用</span>
+                </p>
+            </div>
+        </header>
+        <section class="ipt_wrapper">
+            <div class="ipt_title">购买数量</div>
+            <div class="ipt_group">
+                <div class="ipt_item">
+                    <label>成人票</label>
+                    <p class="Spinner"></p>
+                </div>
+                <div class="ipt_item">
+                    <label>儿童票</label>
+                    <p class="Spinner"></p>
+                </div>
+                <div class="ipt_item">
+                    <label>学生票</label>
+                    <p class="Spinner"></p>
+                </div>
+                <div class="ipt_item">
+                    <label>亲子票（1大1小）</label>
+                    <p class="Spinner"></p>
+                </div>
+                <div class="ipt_item">
+                    <label>家庭票（2大1小）</label>
+                    <p class="Spinner"></p>
+                </div>
+            </div>
+        </section>
+        <section class="ipt_wrapper">
+            <div class="ipt_title">取票信息<span class="tips">仅需添加1位取票人用于接收出票信息</span></div>
+            <div class="ipt_group">
+                <div class="ipt_item">
+                    <label for>姓名</label>
+                    <input type="text" placeholder="ddddd">
+                </div>
+                <div class="ipt_item">
+                    <label for>身份证号</label>
+                    <input type="number" placeholder="ddddd">
+                </div>
+                <div class="ipt_item">
+                    <label for>手机号码</label>
+                    <input type="tel" placeholder="ddddd">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="submit_wrapper">
+                <div class="shop_price">
+                    共计<p>￥<b>300</b></p>
+                </div>
+                <div class="submit">立即购买</div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/jquery.Spinner.js"></script>
+    <script>
+        $(function () {
+            // FastClick.attach(document.body);    
+            $(".Spinner").Spinner({
+                value: 1,
+                len: 3,
+                max: 999
+            });
+        });
+    </script>
+</body>
+
+</html>

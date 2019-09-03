@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="../static/">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/ycyp_gouwuche.css">
+    <script src="./lib/jquery-2.1.4.js"></script>
+</head>
+
+<body>
+    <div class="gouwuche_container">
+        <div class="manage">
+            <!-- 管理按钮 -->
+            <div class="manage_wrapper">
+                <div class="manage_pic">
+                    <img src="./images/gouwuche_mange.png">
+                </div>
+                <div class="manage_txt">管理</div>
+            </div>
+        </div>
+        <!-- 宝贝数量 -->
+        <div class="thingNum">
+            共<span>3</span>件宝贝
+        </div>
+        <!-- 购物车列表 -->
+        <div class="thing_lists">
+            <div class="thing_template">
+
+                <!-- 选择框 -->
+                <div class="chooseStatue">
+                </div>
+                <!-- 左边的图片 -->
+                <div class="thing_pic">
+                    <img src="./upload/commodity03.png">
+                </div>
+                <!-- 右边的信息 -->
+                <div class="thing_info">
+                    <div class="info_title">
+                        手工虎头鞋0-6-12个月婴儿鞋新生儿周岁小公主...
+                    </div>
+                    <div class="info_size">14码/鞋内长10cm</div>
+                    <div class="info_priceAndNum">
+                        <div class="info_price">
+                            <span class="doler">￥</span><span class="Oneprice">36</span></div>
+                        <div class="Spinner"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="thing_template">
+                <!-- 选择框 -->
+                <div class="chooseStatue">
+                </div>
+                <!-- 左边的图片 -->
+                <div class="thing_pic">
+                    <img src="./upload/commodity03.png">
+                </div>
+                <!-- 右边的信息 -->
+                <div class="thing_info">
+                    <div class="info_title">
+                        手工虎头鞋0-6-12个月婴儿鞋新生儿周岁小公主...
+                    </div>
+                    <div class="info_size">14码/鞋内长10cm</div>
+                    <div class="info_priceAndNum">
+                        <div class="info_price">
+                            <span class="doler">￥</span><span class="Oneprice">33</span>
+                        </div>
+                        <div class="Spinner"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="thing_template">
+                <!-- 选择框 -->
+                <div class="chooseStatue">
+                </div>
+                <!-- 左边的图片 -->
+                <div class="thing_pic">
+                    <img src="./upload/commodity03.png">
+                </div>
+                <!-- 右边的信息 -->
+                <div class="thing_info">
+                    <div class="info_title">
+                        手工虎头鞋0-6-12个月婴儿鞋新生儿周岁小公主...
+                    </div>
+                    <div class="info_size">14码/鞋内长10cm</div>
+                    <div class="info_priceAndNum">
+                        <div class="info_price">
+                            <span class="doler">￥</span><span class="Oneprice">34</span>
+                        </div>
+                        <div class="Spinner"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="thing_template">
+                <!-- 选择框 -->
+                <div class="chooseStatue">
+
+                </div>
+                <!-- 左边的图片 -->
+                <div class="thing_pic">
+                    <img src="./upload/commodity03.png">
+                </div>
+                <!-- 右边的信息 -->
+                <div class="thing_info">
+                    <div class="info_title">
+                        手工虎头鞋0-6-12个月婴儿鞋新生儿周岁小公主...
+                    </div>
+                    <div class="info_size">14码/鞋内长10cm</div>
+                    <div class="info_priceAndNum">
+                        <div class="info_price">
+                            <span class="doler">￥</span><span class="Oneprice">35</span></div>
+                        <div class="Spinner"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="thing_template">
+                <!-- 选择框 -->
+                <div class="chooseStatue">
+
+                </div>
+                <!-- 左边的图片 -->
+                <div class="thing_pic">
+                    <img id="choosePic" src="./upload/commodity03.png">
+                </div>
+                <!-- 右边的信息 -->
+                <div class="thing_info">
+                    <div class="info_title">
+                        手工虎头鞋0-6-12个月婴儿鞋新生儿周岁小公主...
+                    </div>
+                    <div class="info_size">14码/鞋内长10cm</div>
+                    <div class="info_priceAndNum">
+                        <div class="info_price">
+                            <span class="doler">￥</span><span class="Oneprice">36</span></div>
+                        <div class="Spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页脚 结算 / 删除 -->
+        <div class="getPrice">
+            <div class="getPrice_left">
+                <div class="getPrice_icon">
+                </div>
+                <div class="allChecked">全选</div>
+            </div>
+            <div class="getPrice_right">
+                <div class="add_all">合计:</div>
+                <div class="price">￥<span class="Allprice">0</span></div>
+                <div class="add_btn">结算
+                    <!-- (<span class="add_btn_nums">0</span>) -->
+                </div>
+            </div>
+            <div class="delete">
+                删除
+            </div>
+        </div>
+        <!-- 页脚tabbar -->
+        <div class="food_bottom_tabbar">
+            <a href="../盐城优品/index.html">
+                <div class="food_tabbar">
+                    <div>
+                        <img src="./images/food_index_custom.png" alt="">
+                    </div>
+                    <p class="weui-tabbar_label">首页</p>
+                </div>
+            </a>
+            <a href="../盐城优品/ycyp_Allsales.html">
+                <div class="food_tabbar">
+                    <div>
+                        <img src="./images/ynt_sale_all__cus.png">
+                    </div>
+                    <p class="weui-tabbar_label">全部商品</p>
+                </div>
+            </a>
+            <a href="javascript:void(0);">
+                <div class="food_tabbar">
+                    <div>
+                        <img src="./images/ynt_sale_shopcar_light.png">
+                    </div>
+                    <p class="weui-tabbar_label gouwuche">购物车</p>
+                </div>
+
+            </a>
+            <a href="../盐城优品/userTourism.html">
+                <div class="food_tabbar">
+                    <div>
+                        <img src="./images/food_my_custom.png">
+                    </div>
+                    <p class="weui-tabbar_label">我的</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+<script src="js/shoppingcard.js"></script>
+<script>
+    $(function () {
+        $(".Spinner").Spinner({
+            value: 1,
+            len: 3,
+            max: 999
+        });
+    });
+</script>
+
+</html>

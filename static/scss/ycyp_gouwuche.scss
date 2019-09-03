@@ -1,0 +1,379 @@
+@import './_base';
+@import './_tool';
+.dv {
+    width: rem(300);
+    height: rem(300);
+    background-color: aqua;
+    border: 1px solid #000;
+}
+
+.gouwuche_container {
+    width: 100%;
+    height: 100vh;
+    // min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #31BCCA, #F4F4F5 50%);
+}
+
+.manage {
+    font-size: rem(36);
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin-right: rem(30);
+    justify-content: flex-end;
+    // margin-top: rem(30)
+    .manage_wrapper {
+        padding: rem(30);
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+        // background-color: aqua;
+    }
+}
+
+.manage_pic {
+    width: rem(28);
+    height: rem(28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.manage_pic>img {
+    width: 100%;
+    height: 100%;
+}
+
+.thingNum {
+    font-size: rem(30);
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #ffffff;
+    margin-left: rem(30)
+}
+
+.thing_lists {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    margin-top: rem(30);
+    padding-bottom: rem(220);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.thing_template {
+    width: rem(690);
+    // height: rem(228);
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    padding: rem(30) rem(29) rem(30) rem(20);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.chooseStatue {
+    width: rem(30);
+    height: rem(30);
+    margin-right: rem(20);
+    background: url("../images/gouwucheUnchooesd.png");
+    background-size: cover;
+}
+
+.chooseStatue.active {
+    width: rem(30);
+    height: rem(30);
+    margin-right: rem(20);
+    background: url("../images/gouwucheChoosed.png");
+    background-size: 100% 100%;
+}
+
+.thing_pic {
+    width: rem(226);
+    height: rem(168);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.thing_pic>img {
+    width: 100%;
+    height: 100%x;
+}
+
+.thing_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: rem(24);
+    max-width: rem(341);
+}
+
+.info_title {
+    font-size: rem(30);
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    flex-shrink: 1;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis; // 溢出文本省略号显示
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // 限制块级元素文本行数
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical; // 重置文本排列方式
+    /* autoprefixer: on */
+}
+
+.min {
+    width: rem(27);
+    height: rem(27);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: rem(20)
+}
+
+.min>img {
+    width: 100%;
+    height: 100%;
+}
+
+.add {
+    width: rem(27);
+    height: rem(27);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: rem(20)
+}
+
+.add>img {
+    width: 100%;
+    height: 100%;
+}
+
+.thing_Nums {
+    font-size: rem(26);
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: rem(150)
+}
+
+.info_size {
+    font-size: rem(20);
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    margin-top: rem(15);
+    width: rem(200);
+    height: rem(40);
+    background: #F3F6F9;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info_priceAndNum {
+    margin-top: rem(14);
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    // align-items: center;
+}
+
+.info_price {
+    font-size: rem(36);
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #EC6452;
+}
+
+.doler {
+    font-size: rem(30);
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #EC6452
+}
+
+// 管理商品
+.manage_thing {
+    display: none;
+    position: fixed;
+    bottom: rem(90);
+    height: rem(113);
+    width: 100%;
+    align-items: center;
+    background-color: #ffffff;
+    padding: rem(0) rem(30) rem(0) rem(30);
+    justify-content: space-between;
+}
+
+.delete {
+    width: rem(141);
+    line-height: rem(60);
+    border: 2px solid #31BCCA;
+    border-radius: 6px;
+    font-size: rem(32);
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #31BCCA;
+    display: none;
+    text-align: center;
+}
+
+// 结算
+.getPrice {
+    // display: none;
+    position: fixed;
+    bottom: rem(90);
+    height: rem(113);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: rem(0) rem(30) rem(0) rem(30);
+    justify-content: space-between;
+}
+
+.getPrice_left {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    // background-color: aqua;
+}
+
+.getPrice_icon {
+    width: rem(30);
+    height: rem(30);
+    margin-right: rem(20);
+    background: url("../images/gouwucheUnchooesd.png");
+    background-size: cover;
+}
+
+.getPrice_icon.active {
+    width: rem(30);
+    height: rem(30);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/gouwucheChoosed.png");
+    background-size: cover;
+}
+
+.allChecked {
+    font-size: rem(32);
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    margin-left: rem(10)
+}
+
+.getPrice_right {
+    display: flex;
+    align-items: center;
+}
+
+.add_all {
+    font-size: rem(32);
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    margin-right: rem(10);
+}
+
+.price {
+    font-size: rem(32);
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #31BCCA;
+    margin-right: rem(19)
+}
+
+.add_btn {
+    width: rem(141);
+    height: rem(60);
+    border-radius: 6px;
+    background-color: #31BCCA;
+    font-size: rem(32);
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// 底部导航栏
+.food_bottom_tabbar {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: rem(750);
+    height: rem(98);
+    background: rgba(255, 255, 255, 1);
+}
+
+.food_tabbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.food_tabbar>div:first-of-type {
+    width: rem(41);
+    height: rem(39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food_tabbar>div:first-of-type>img {
+    width: 100%;
+    height: 100%;
+}
+
+.weui-tabbar_label {
+    height: rem(24);
+    font-size: rem(20);
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    margin-top: rem(12)
+}
+
+.gouwuche {
+    color: #31BCCA;
+}
+
+/*--订单详情---spinner--*/
+.Spinner{display:block;overflow:hidden;width:84px;margin:0; position: absolute; right: 0;display: flex;}
+.Spinner .Amount{width:26px;padding:0px 5px;border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9;float:left;text-align:center;color:#333;outline:0; font-size:14px;}
+.Spinner a{display:inline-block;width:22px;height:22px;border:1px solid #d9d9d9;background-color:#f7f7f7;float:left;cursor:pointer;outline:0;}
+.Spinner a i{font-style:normal;background:url(../images/BuynBtn.png) no-repeat;display:block;width:12px;height:12px;margin:5px;text-indent:999999%;overflow:hidden;}
+.Spinner .Decrease i{background-position:-12px -12px;}
+.Spinner .Increase i{background-position:-12px -0px;}
+.Spinner .DisDe i{background-position:-0px -12px;}
+.Spinner .DisIn i{background-position:-0px -0px;}

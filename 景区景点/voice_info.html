@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>语音导航详情</title>
+    <base href="../static/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/voice_info.css">
+</head>
+
+<body ontouchstart>
+    <div class="music-container">
+        <div class="record">
+            <img src="images/Mrflyer.jpg" alt="">
+        </div>
+        <div class="msc-box">
+            <div class="msc-hd">
+                <div class="msc-info">
+                    <div class="msc-title">中华麋鹿园中华麋鹿园中华麋鹿园中华麋鹿园中华麋鹿园</div>
+                    <div class="msc-time">00:05:03</div>
+                </div>
+                <audio src="upload/斑马.mp3" controls id="myaudio" ></audio>
+                <div class="start">
+                    <img src="images/voice_play.png" alt="">
+                </div>
+            </div>
+            <div class="msc-progress">
+                <div class="prg-bar" style="width: 50%"></div>
+            </div>
+        </div>
+    </div>
+    <div class="voice-desc">
+        <div class="desc-title">景点简介</div>
+        <div class="desc-text">
+            <p>江苏省大丰麋鹿国家级自然保护区，由江苏省人民政府于1986年批准建立，面积4万亩，承担着保护麋鹿、丹顶鹤等野生动物及湿地生态系统、恢复野生麋鹿种群的重要任务。自九十年代开始发展生态旅游建设中华麋鹿园景区，2013年1月，经批准成立盐城市神鹿生态旅游发展有限公司并作为企业法人全面负责中华麋鹿园的经营管理。2007年创建国家4A级旅游景区，2015年10月成功创建成为苏北首家国家5A级旅游景区。
+            </p> 
+            <p>中华麋鹿园地处亚洲东方、太平洋西岸的黄海滩涂，是亚洲东方最大的湿地，是太平洋西岸古生境保护最完好的半原始湿地，被联合国列入国际重要湿地名录，作为永久性保护地。</p>
+        </div>
+    </div>
+
+
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script src="lib/fastclick.js"></script>
+    <script type="text/javascript" src="js/jquery.Spinner.js"></script>
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/config.js"></script>
+</body>
+<script>
+    let urlpath = new URLSearchParams(location.search)
+    let id = urlpath.get('id') || 1
+    $.ajax({
+        url: `${baseUrl}/api/v1/scenic/detail`,
+        data: {
+            id
+        },
+        success(res) {
+            let {
+                error_code,
+                data
+            } = res
+            if (error_code === 0) {
+                console.log(data);
+                $('.msc-title').text(data.scenic_name)
+                $('.record img').attr('src', data.scenic_icon_img)
+                $('.desc-text').text(data.scenic_content)
+            }
+        }
+    })
+    var btn = document.querySelector('.start');
+    var audio = document.getElementById('myaudio');
+    var tag = false ;
+    btn.onclick = function () {
+        console.log(111);
+        if (tag) {
+            // alert('关闭');
+            $('.start img').attr('src', 'images/voice_play.png')
+            audio.pause();
+            tag = false;
+        } else {
+            // alert('播放');
+            $('.start img').attr('src', 'images/voice_pause.png')
+            audio.play();
+            tag = true;
+        }
+    }
+</script>
+
+</html>

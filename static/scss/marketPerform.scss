@@ -1,0 +1,335 @@
+@import './_base';
+@import './_tool';
+
+.weui-content {
+    background-color:#F4F4F4;
+}
+header {
+    background: linear-gradient(to bottom, #22C8D8, #fff);
+}
+// 搜索区块
+.search_cont {
+    padding: rem(30) rem(30) 0 rem(30);
+    .search {
+        height: rem(66);
+        padding: 0 rem(40);
+        border-radius: rem(33);
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        > img {
+            flex-shrink: 0;
+            width: rem(24);
+            margin-right: rem(20);
+        }
+        > input {
+            flex: 1;
+            align-self: stretch;
+        }
+    }
+}
+// 重置 banner 样式
+.swiper-container {
+    width: 100%;
+    padding: rem(30) 0;
+    .swiper-slide {
+        width: 80%;
+        transform: scale(0.9);
+        transition: all .5s;
+        &.swiper-slide-active {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+        }
+        > a {
+            display: inline-block;
+            width: 100%;
+            height: rem(286);   //  轮播图子项高度
+            // background-color: aqua;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow:-1px 3px 10px 0px rgba(38, 217, 201, 0.35);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+// 当季热门
+nav {
+    padding: 0 rem(30) rem(30);
+    background-color: #fff;
+    .hot_cont {
+        display: flex;
+        justify-content: space-between;   
+    }
+    .hotmk_fl, .hotmk_fr {
+        .hotmk_pic {
+            height: rem(300);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: rem(16);
+            position: relative;
+            &::before {
+                content: '演唱会';
+                position: absolute;
+                top: 0; right: 0;
+                transform: scale(.833);
+                transform-origin: right top;
+                padding: 0 rem(15);
+                line-height: rem(36);
+                background:rgba(51,51,51,.8);
+                border-radius:0px 4px 0px 4px;
+                font-size: 12px;
+                color:rgba(255,255,255,1);
+            }
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        p {
+            font-size: 13px;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .hotmk_fl {
+        width: rem(444);
+    }
+    .hotmk_fr {
+        width: rem(226);
+    }
+}
+// 最新公益
+section {
+    margin-top: rem(10);
+    padding: rem(30);
+    background-color: #fff;
+    &.benefit .ticket_item {
+        .ticket_pic::after {
+            content: ''!important;
+        }
+    }
+    .title {
+        padding-bottom: rem(20);
+        font-size: 18px;
+        line-height: 1;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+    }
+    .sct_bd {
+        overflow-x: auto;
+    }
+    .ticket_list {
+        display: flex;
+    }
+    .ticket_item {
+        flex-shrink: 0;
+        width: rem(226);
+        margin-right: rem(20);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:nth-of-type(1) .ticket_pic::after{
+            content: 'TOP.1';
+        }
+        &:nth-of-type(2) .ticket_pic::after{
+            content: 'TOP.2';
+        }
+        &:nth-of-type(3) .ticket_pic::after{
+            content: 'TOP.3';
+        }
+    }
+    .ticket_pic {
+        height: rem(300);
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &::before {
+            content: attr(data-txt);
+            position: absolute;
+            top: 0; right: 0;
+            padding: 5px;
+            font-size: 12px;
+            font-weight:400;
+            color:rgba(255,255,255,1);
+            background:rgba(51,51,51,.8);
+            border-radius:0px 4px 0px 4px;
+            transform: scale(.833);
+            transform-origin: right top;
+        }
+        &::after {
+            // content: 'TOP.1';
+            position: absolute;
+            bottom: 0; left: 0;
+            // width: rem(87);
+            font-size: 18px;
+            line-height: 4px;
+            border-bottom: 9px solid #22C8D8;
+            font-family:Bebas Neue;
+            font-weight:bold;
+            // background-color: #22C8D8;
+            color:rgba(255,255,255,1);
+        }
+    }
+    .ticket_title {
+        font-size: 13px;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        padding: rem(10) 0 rem(16);
+    }
+    .ticket_price {
+        font-size: 12px;
+        color:rgba(156,166,176,1);
+        span {
+            font-size: 15px;
+            font-weight:bold;
+            color:rgba(255,102,102,1);
+            padding-right: 4px;
+        }
+    }
+}
+// 为您推荐
+.recommend {
+    // margin-top: rem(10);
+    padding: rem(30) ;
+    background-color: #fff;
+}
+.rmd_item {
+    display: flex;
+    padding: rem(30) 0;
+    border-bottom: 1px solid #F3F6F9;
+    &:first-of-type {
+        padding-top: 0;
+    }
+    .rmd_pic {
+        flex-shrink: 0;
+        width: rem(225);
+        height: rem(300);
+        margin-right: rem(20);
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        &::before {
+            content: attr(data-txt);
+            position: absolute;
+            top: 0; right: 0;
+            background:rgba(51,51,51,.8);
+            border-radius:0px 4px 0px 4px;
+            padding: 0 rem(10);
+            font-size:12px;
+            transform: scale(.833);
+            transform-origin: right top;
+            color:rgba(255,255,255,1);
+            line-height: 21px;
+        }
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .rmd_cont {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .rmd_title {
+        padding-bottom: rem(20);
+        // background-color: aqua;
+        font-size: 17px;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        // line-height: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .rmd_desc > p {
+        display: flex;
+        align-items: flex-start;
+        font-size: 13px;
+        font-weight:400;
+        color:rgba(153,153,153,1);
+        line-height: 18px;
+        padding-bottom: 2px;
+        .icon { 
+            display: inline-flex; 
+            align-items: center; 
+            padding-right: 5px;
+        }
+        img {
+            width: rem(24);
+        }
+    }
+    .rmd_bd {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .rmd_price {
+        font-size: 10px;
+        color:rgba(156,166,176,1);
+        span {
+            font-size:18px;
+            font-weight:bold;
+            color:rgba(255,102,102,1);
+            // padding-right: 3px;
+        }
+        b {
+            font-size: 10px;
+        }
+    }
+    .rmd_btn {
+        background:linear-gradient(-23deg,rgba(34,200,216,1) 0%,rgba(34,216,210,1) 100%);
+        padding: 0 rem(25);
+        line-height: rem(50);
+        font-size: 12px;
+        font-weight:500;
+        color:rgba(255,255,255,1);
+        border-radius: 4px;
+    }
+}
+.title {
+    font-size: 18px;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    line-height: 1;
+    padding-bottom: rem(20);
+}
+
+// 页脚tabbar
+footer {
+    // position: fixed;
+    // bottom: 0; left: 0;
+    width: 100%;
+    padding: 0 rem(30) rem(25);
+    box-sizing: border-box;
+    background-color: #fff;
+    > a {
+        height: rem(90);
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color:rgba(153,153,153,1);
+        background-color: #F3F6F9;
+    }
+}
